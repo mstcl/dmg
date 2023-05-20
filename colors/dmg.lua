@@ -44,10 +44,10 @@ local addbg = { "#393913", 51, "cyan" }
 local addbg_light = { "#CBE5B8", 51, "cyan" }
 local changefg = { "#6b4255", 51, "cyan" }
 local changebg = { "#4a3c42", 51, "cyan" }
-local changebg_light = { "#D4DEE7", 51, "cyan" }
+local changebg_light = { "#d8c0cb", 51, "cyan" }
 local delfg = { "#8d2d29", 51, "cyan" }
 local delbg = { "#473126", 51, "cyan" }
-local delbg_light = { "#EBD8DA", 51, "cyan" }
+local delbg_light = { "#eec5c4", 51, "cyan" }
 
 local highlight_group_normal = { dark = { fg = gray7, bg = black0 }, light = { fg = black0, bg = white1 } }
 
@@ -166,10 +166,6 @@ local highlight_groups = {
 	Folded = {
 		dark = { bg = changebg },
 		light = { bg = changebg_light },
-		--[[ style = {
-			"bold",
-			"italic",
-		}, ]]
 	},
 
 	--[[ 4.2.6. Diffs]]
