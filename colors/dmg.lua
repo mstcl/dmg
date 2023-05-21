@@ -23,7 +23,7 @@ local orange0 = { "#844242", 208, "darkyellow" }
 local orange1 = { "#682828", 208, "darkyellow" }
 local orange2 = { "#2E2520", 208, "darkyellow" }
 local yellow0 = orange0
-local yellow2 = orange1
+local yellow1 = orange1
 local green0 = { "#3b673f", 72, "green" }
 local green1 = { "#144119", 83, "darkgreen" }
 local green2 = { "#08260C", 72, "darkgreen" }
@@ -67,7 +67,7 @@ local highlight_groups = {
 	String = { fg = green2, style = "italic" },
 	Character = { fg = green2 },
 	Number = { fg = pink0 },
-	Boolean = { fg = yellow2 },
+	Boolean = { fg = yellow1 },
 	Float = "Number",
 
 	--[[ 4.1.2. Identifiers]]
@@ -89,13 +89,13 @@ local highlight_groups = {
 	include = { fg = pink1, style = { "nocombine", "italic" } },
 	Define = { fg = blue0, style = "nocombine" },
 	Macro = { fg = blue0, style = "italic" },
-	PreCondit = { dark = { fg = yellow2 }, light = { fg = orange1 }, style = "italic" },
+	PreCondit = { dark = { fg = yellow1 }, light = { fg = orange1 }, style = "italic" },
 
 	--[[ 4.1.5. Semantics]]
-	Type = { fg = yellow2 },
+	Type = { fg = yellow1 },
 	StorageClass = { dark = { fg = orange0 }, light = { fg = orange1 }, style = "bold" },
 	Structure = { fg = yellow0, style = "bold" },
-	Typedef = { dark = { fg = yellow2 }, light = { fg = orange1 }, style = "italic" },
+	Typedef = { dark = { fg = yellow1 }, light = { fg = orange1 }, style = "italic" },
 
 	--[[ 4.1.6. Edge Cases]]
 	Special = { fg = blue0, style = "bold" },
@@ -131,7 +131,7 @@ local highlight_groups = {
 
 	--[[ 4.2.2. Separators]]
 	VertSplit = { dark = { bg = gray2, fg = gray2 }, light = { bg = gray9, fg = gray9 } },
-	TabLine = { dark = { fg = black1, bg = black1 }, light = { fg = white1, bg = white1 } },
+	TabLine = { fg = gray6, dark = { bg = gray4 }, light = { bg = gray8 }, style = "bold" },
 	TabLineFill = { dark = { fg = black1, bg = black1 }, light = { fg = white1, bg = white1 } },
 	TabLineSel = { fg = FG, bg = BG },
 	Title = { style = "bold" },
@@ -867,63 +867,51 @@ local highlight_groups = {
 	["@text.strong"] = { style = "bold" },
 
 	--[[ 4.4.9. barbar.nvim ]]
-	BufferAlternate = function(self)
-		return { fg = self.BufferVisible.fg, bg = self.TabLine.bg }
-	end,
-	BufferAlternateERROR = function(self)
-		return { fg = self.ErrorMsg.fg, bg = gray1 }
-	end,
-	BufferAlternateHINT = function(self)
-		return { fg = self.DiagnosticFloatingHint.fg, bg = gray1 }
-	end,
-	BufferAlternateIndex = function(self)
-		return { fg = self.Number.fg, bg = gray1 }
-	end,
-	BufferAlternateINFO = function(self)
-		return { fg = self.DiagnosticFloatingInfo.fg, bg = gray1 }
-	end,
-	BufferAlternateMod = function(self)
-		return { fg = self.BufferVisibleMod.fg, bg = gray1, style = "bold" }
-	end,
-	BufferAlternateSign = function(self)
-		return { fg = self.DiagnosticFloatingHint.fg, bg = self.BufferAlternate.bg }
-	end,
-	BufferAlternateTarget = function(self)
-		return { fg = self.BufferAlternateSign.fg, bg = gray1, style = "italic" }
-	end,
-	BufferAlternateWARN = function(self)
-		return { fg = self.WarningMsg.fg, bg = gray1 }
-	end,
-	BufferCurrent = { dark = { fg = gray6 }, light = { fg = gray6 }, style = "bold" },
-	BufferCurrentIndex = function(self)
-		return { fg = self.InfoMsg.fg, bg = self.BufferCurrent.bg }
-	end,
-	BufferCurrentMod = { fg = yellow2, bg = BG, style = { "italic", "bold" } },
-	BufferCurrentSign = { dark = { fg = red0 }, light = { fg = red1 }, bg = BG },
-	BufferCurrentTarget = { fg = blue0, style = "bold" },
-	BufferInactive = { dark = { fg = gray1, bg = gray4 }, light = { fg = gray5, bg = gray8 } },
-	BufferInactiveIndex = function(self)
-		return { fg = self.InfoMsg.fg, bg = self.BufferInactive.bg }
-	end,
-	BufferInactiveMod = { dark = { fg = gray1, bg = gray4 }, light = { fg = gray5, bg = gray8 } },
-	BufferInactiveSign = { dark = { fg = gray1, bg = gray4 }, light = { fg = gray5, bg = gray8 } },
-	BufferInactiveTarget = {
-		dark = { fg = gray1, bg = gray4 },
-		light = { fg = gray5, bg = gray8 },
-		style = "bold",
+	BufferCurrent = { dark = { fg = gray5, bg = gray3 }, light = { fg = gray0, bg = white0 }, style = "bold" },
+	BufferCurrentMod = {
+		dark = { fg = yellow0 },
+		light = { fg = yellow1 },
+		bg = white0,
+		style = { "italic", "bold" },
 	},
-	BufferTabpages = { fg = gray6, dark = { bg = gray4 }, light = { bg = gray8 }, style = "bold" },
-	BufferTabpageFill = { fg = gray6, dark = { bg = gray4 }, light = { bg = gray8 }, style = "bold" },
-	BufferOffset = { fg = gray6, dark = { bg = black1 }, light = { bg = gray9 }, style = "bold" },
-	BufferVisible = { fg = gray6, bg = BG, style = { "bold" } },
-	BufferVisibleIndex = function(self)
-		return { fg = self.InfoMsg.fg, bg = self.BufferVisible.bg }
+	BufferCurrentSign = { fg = white0, bg = white0 },
+	BufferCurrentTarget = {
+		dark = { fg = red0 },
+		light = { fg = red1 },
+		bg = white0,
+		style = { "bold" },
+	},
+
+	BufferInactive = { dark = { fg = gray1, bg = gray4 }, light = { fg = gray5, bg = gray8 } },
+	BufferInactiveMod = "BufferInactive",
+	BufferInactiveSign = function(self)
+		return { fg = self.BufferInactive.bg, bg = self.BufferInactive.bg }
 	end,
-	BufferVisibleMod = { fg = red0, bg = BG, style = { "bold", "italic" } },
-	BufferVisibleSign = { dark = { fg = gray1 }, light = { fg = gray7 }, bg = BG },
-	BufferVisibleTarget = { fg = blue0, bg = BG, style = "bold" },
-	BufferSpaceSeparator = { dark = { fg = gray1, bg = gray1 }, light = { fg = gray9, bg = gray9 } },
-	BufferTypeSeparator = { dark = { fg = gray1, bg = gray1 }, light = { fg = gray9, bg = gray9 } },
+	BufferInactiveTarget = {
+		dark = { fg = red0 },
+		light = { fg = red1 },
+		bg = gray8,
+		style = { "bold" },
+	},
+
+	BufferAlternate = "BufferInactive",
+	BufferAlternateERROR = "BufferInactiveERROR",
+	BufferAlternateMod = "BufferInactiveMod",
+	BufferAlternateSign = "BufferInactiveSign",
+	BufferAlternateTarget = "BufferInactiveTarget",
+
+	BufferVisible = "BufferInactive",
+	BufferVisibleMod = "BufferInactiveMod",
+	BufferVisibleSign = "BufferInactiveSign",
+	BufferVisibleTarget = "BufferInactiveTarget",
+
+	BufferTabpages = "TabLine",
+	BufferTabpageFill = "BufferTabpages",
+	BufferTabpagesSep = "BufferTabpages",
+	BufferSpaceSeparator = function(self)
+		return { fg = self.BufferTabpages.bg, bg = self.BufferTabpages.bg }
+	end,
+	BufferTypeSeparator = "BufferSpaceSeparator",
 
 	--[[ 4.4.10. vim-sandwhich ]]
 	OperatorSandwichChange = "DiffText",
@@ -1059,7 +1047,7 @@ local highlight_groups = {
 
 	--[[ 4.4.18. dev-icons ]]
 	DevIconJS = { fg = yellow0 },
-	DevIconJson = { fg = yellow2 },
+	DevIconJson = { fg = yellow1 },
 	DevIconLua = { fg = blue0 },
 	DevIconCpp = { fg = blue1 },
 	DevIconPy = { fg = blue0 },
