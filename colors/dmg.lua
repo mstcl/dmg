@@ -1068,6 +1068,7 @@ local highlight_groups = {
 	DevIconConfiguration = { fg = gray5 },
 	DevIconH = { fg = purple1 },
 	DevIconDefault = { fg = gray6 },
+
 	--[[ 4.4.19. telescope ]]
 	TelescopeSelection = {
 		dark = { bg = gray2, fg = gray7 },
