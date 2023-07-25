@@ -49,7 +49,7 @@ local delfg = { "#8d2d29", 51, "cyan" }
 local delbg = { "#473126", 51, "cyan" }
 local delbg_light = { "#eec5c4", 51, "cyan" }
 
-local highlight_group_normal = { dark = { fg = gray7, bg = black0 }, light = { fg = black0, bg = white1 } }
+local highlight_group_normal = { dark = { fg = gray7, bg = gray3 }, light = { fg = black0, bg = white1 } }
 
 local BG = highlight_group_normal.bg
 local FG = highlight_group_normal.fg
@@ -63,42 +63,42 @@ local highlight_groups = {
 	Whitespace = "NonText",
 
 	--[[ 4.1.1. Literals]]
-	Constant = { fg = blue1 },
-	String = { fg = green2, style = "italic" },
-	Character = { fg = green2 },
-	Number = { fg = pink0 },
-	Boolean = { fg = yellow1 },
+	Constant = { dark = { fg = blue0}, light = {fg = blue1} },
+	String = { dark = { fg = green0}, light = {fg = green2}, style = "italic" },
+	Character = { dark = { fg = green0}, light = {fg = green2} },
+	Number = { dark = { fg = yellow0}, light = {fg = yellow1} },
+	Boolean = { dark = { fg = yellow0}, light = {fg = yellow1} },
 	Float = "Number",
 
 	--[[ 4.1.2. Identifiers]]
 	Identifier = { dark = { fg = gray7 }, light = { fg = gray0 } },
-	Function = { fg = blue1, style = "bold" },
+	Function = { dark = { fg = blue0}, light = {fg = blue1}, style = "bold" },
 
 	--[[ 4.1.3. Syntax]]
-	Statement = { fg = green1 },
-	Conditional = { fg = orange0, style = "italic" },
-	Repeat = { fg = red1, style = "italic" },
-	Label = { fg = pink1, style = "bold" },
+	Statement = { dark = { fg = green0}, light = {fg = green1} },
+	Conditional = { dark = { fg = orange0}, light = {fg = orange1}, style = "italic" },
+	Repeat = { dark = { fg = red0}, light = {fg = red1}, style = "italic" },
+	Label = { dark = { fg = pink0}, light = {fg = pink1}, style = "bold" },
 	Operator = { dark = { fg = gray5 }, light = { fg = gray0 } },
-	Keyword = { fg = purple1 },
-	Exception = { fg = red0, style = "bold" },
+	Keyword = { dark = { fg = purple0}, light = {fg = purple1} },
+	Exception = { dark = { fg = red0}, light = {fg = red1}, style = "bold" },
 	Noise = "Delimiter",
 
 	--[[ 4.1.4. metatextual information]]
-	preproc = { fg = turquoise1 },
-	include = { fg = pink1, style = { "nocombine", "italic" } },
-	Define = { fg = blue0, style = "nocombine" },
+	preproc = { dark = { fg = turquoise0}, light = {fg = turquoise1} },
+	include = { dark = { fg = pink0}, light = {fg = pink1}, style = { "nocombine", "italic" } },
+	Define = { dark = { fg = blue0}, light = {fg = blue1}, style = "nocombine" },
 	Macro = { fg = blue0, style = "italic" },
 	PreCondit = { dark = { fg = yellow1 }, light = { fg = orange1 }, style = "italic" },
 
 	--[[ 4.1.5. Semantics]]
-	Type = { fg = yellow1 },
+	Type = { dark = { fg = yellow0}, light = {fg = yellow1} },
 	StorageClass = { dark = { fg = orange0 }, light = { fg = orange1 }, style = "bold" },
-	Structure = { fg = yellow0, style = "bold" },
+	Structure = { dark = { fg = yellow0}, light = {fg = yellow1}, style = "bold" },
 	Typedef = { dark = { fg = yellow1 }, light = { fg = orange1 }, style = "italic" },
 
 	--[[ 4.1.6. Edge Cases]]
-	Special = { fg = blue0, style = "bold" },
+	Special = { dark = { fg = blue0}, light = {fg = blue1}, style = "bold" },
 	SpecialChar = { dark = { fg = red0 }, light = { fg = red1 }, style = "italic" },
 	SpecialKey = "Character",
 	Tag = "Underlined",
@@ -107,7 +107,7 @@ local highlight_groups = {
 	Debug = "WarningMsg",
 
 	--[[ 4.1.7. Help Syntax]]
-	Underlined = { fg = turquoise1, style = { "underline", color = turquoise1 } },
+	Underlined = { dark = { fg = turquoise0}, light = {fg = turquoise1}, style = { "underline", color = turquoise1 } },
 	Ignore = { fg = gray0 },
 	Error = { fg = black0, bg = red0, style = { "bold", "underline", color = black0 } },
 	-- Error = { fg = black, bg = red, style = { "bold" } },
@@ -120,7 +120,7 @@ local highlight_groups = {
 	--[[ 4.2... Editor UI  ]]
 
 	--[[ 4.2.1. Status Line]]
-	StatusLine = { dark = { bg = BG, fg = green0 }, light = { bg = BG, fg = green2 } },
+	StatusLine = { dark = { bg = gray2, fg = green0 }, light = { bg = white0, fg = green2 } },
 	StatusLineNC = function(self)
 		return { fg = gray0, bg = self.StatusLine.bg }
 	end,
@@ -177,7 +177,7 @@ local highlight_groups = {
 	end,
 
 	--[[ 4.2.7. Searching]]
-	IncSearch = { style = { "bold", "inverse" } },
+	IncSearch = { style = { "inverse" } },
 	MatchParen = { style = { "inverse" } },
 	-- Search = { style = { "bold", "underline" } },
 	Search = { style = { "inverse", "bold", color = NONE } },
@@ -193,13 +193,13 @@ local highlight_groups = {
 	SignColumn = { bg = BG },
 
 	--[[ 4.2.10. Messages]]
-	ErrorMsg = { fg = red0, style = "bold" },
-	HintMsg = { fg = magenta0, style = "italic" },
-	InfoMsg = { fg = pink0, style = "italic" },
-	ModeMsg = { fg = yellow0 },
+	ErrorMsg = { dark = { fg = red0}, light = {fg = red1}, style = "bold" },
+	HintMsg = { dark = { fg = magenta0}, light = {fg = magenta1}, style = "italic" },
+	InfoMsg = { dark = { fg = pink0}, light = {fg = pink1}, style = "italic" },
+	ModeMsg = { dark = { fg = yellow0}, light = {fg = yellow1} },
 	MoreMsg = { fg = gray8 },
-	WarningMsg = { fg = orange0, style = "bold" },
-	Question = { fg = turquoise0, style = "bold" },
+	WarningMsg = { dark = { fg = orange0}, light = {fg = orange1}, style = "bold" },
+	Question = { dark = { fg = turquoise0}, light = {fg = turquoise1}, style = "bold" },
 
 	--[[ 4.2.11. LSP / Diagnostics ]]
 	DiagnosticDeprecated = { strikethrough = true },
@@ -824,7 +824,7 @@ local highlight_groups = {
 
 	--[[ 4.4.8. nvim-treesitter ]]
 	["@structure"] = "Structure", -- BUG: missing from Nvim >=0.9
-	["@boolean"] = { fg = orange1, style = "italic" },
+	["@boolean"] = { dark = { fg = orange0}, light = {fg = orange1}, style = "italic" },
 	["@text.note"] = "Info",
 	["@text.warning"] = "Warning",
 	["@text.danger"] = "Error",
@@ -832,35 +832,35 @@ local highlight_groups = {
 	["@type"] = "Type",
 	["@constant"] = "Constant",
 	["@conditional"] = "Conditional",
-	["@constant.builtin"] = { fg = orange0, style = "italic" },
+	["@constant.builtin"] = { dark = { fg = orange0}, light = {fg = orange1}, style = "italic" },
 	["@constructor"] = "Typedef",
-	["@text.reference"] = { fg = blue1 },
+	["@text.reference"] = { dark = { fg = blue0}, light = {fg = blue1} },
 	["@function.builtin"] = { fg = turquoise1, style = "bold" },
 	["@tag"] = "Tag",
 	["@function"] = "Function",
 	["@field"] = { dark = { fg = gray7 }, light = { fg = gray1 } },
 	["@exception"] = { fg = purple0, style = "italic" },
-	["@function.macro"] = { fg = red1 },
+	["@function.macro"] = { dark = { fg = red0}, light = {fg = red1} },
 	["@string.escape"] = "Character",
 	["@string.regex"] = "SpecialChar",
 	["@operator"] = "Operator",
 	["@parameter"] = { fg = orange0 },
-	["@property"] = { fg = turquoise1 },
+	["@property"] = { dark = { fg = turquoise0}, light = {fg = turquoise1} },
 	["@punctuation.delimiter"] = { dark = { fg = gray5 }, light = { fg = gray0 } },
 	["@punctuation.bracket"] = { fg = red0 },
 	["@punctuation.special"] = { fg = gray0, style = "bold" },
 	["@repeat"] = "Repeat",
-	["@keyword"] = { fg = blue1, style = "italic" },
-	["@keyword.function"] = { fg = red1, style = "italic" },
-	["@keyword.return"] = { fg = red1, style = "italic" },
-	["@include"] = { fg = purple1, style = "italic" },
+	["@keyword"] = { dark = { fg = blue0}, light = {fg = blue1}, style = "italic" },
+	["@keyword.function"] = { dark = { fg = red0}, light = {fg = red1}, style = "italic" },
+	["@keyword.return"] = { dark = { fg = red0}, light = {fg = red1}, style = "italic" },
+	["@include"] = { dark = { fg = purple0}, light = {fg = purple1}, style = "italic" },
 	["@label"] = { fg = blue0 },
 	["@namespace"] = "Directory",
 	["@error"] = { fg = red0, style = { "undercurl", color = red0 } },
 	["@text.uri"] = "Underlined",
 	["@variable"] = "Identifier",
-	["@variable.builtin"] = { fg = red1, style = "italic" },
-	["@type.definition"] = { fg = blue1, style = "italic" },
+	["@variable.builtin"] = { dark = { fg = red0}, light = {fg = red1}, style = "italic" },
+	["@type.definition"] = { dark = { fg = blue0}, light = {fg = blue1}, style = "italic" },
 	["@text.title"] = { fg = red0, style = { "bold", "underline", color = red0 } },
 	["@text.literal"] = "String",
 	["@text.emphasis"] = { style = "italic" },
@@ -984,9 +984,9 @@ local highlight_groups = {
 	GitSignsDeleteLn = "GitSignsDeleteNr",
 
 	--[[ 4.4.16. nvim-compe and cmp ]]
-	CmpDocumentationBorder = { bg = BG, dark = { fg = gray1 }, light = { fg = gray7 } },
+	CmpDocumentationBorder = {dark = { fg = gray1 , bg = gray1}, light = { fg = gray8, bg = gray8} },
 	CmpBorder = { bg = BG, dark = { fg = gray1 }, light = { fg = gray7 } },
-	CmpDocumentation = { bg = BG },
+	CmpDocumentation = { bg = gray8 },
 	CmpItemAbbr = { fg = gray5 },
 	CmpItemMenu = { dark = { fg = gray6 }, light = { fg = gray7 }, style = "italic" },
 	CmpItemAbbrMatch = { fg = red0 },
@@ -1072,18 +1072,18 @@ local highlight_groups = {
 	--[[ 4.4.19. telescope ]]
 	TelescopeSelection = {
 		dark = { bg = gray2, fg = gray7 },
-		light = { bg = gray9, fg = amoled },
+		light = { bg = gray8, fg = amoled },
 		style = { "bold" },
 	},
-	TelescopeSelectionCaret = { dark = { bg = gray2, fg = gray7 }, light = { bg = gray9, fg = amoled } },
+	TelescopeSelectionCaret = { dark = { bg = gray2, fg = gray7 }, light = { bg = gray8, fg = amoled } },
 	TelescopeMultiSelection = { dark = { fg = gray7 }, light = { fg = amoled }, style = { "bold" } },
-	TelescopeNormal = { fg = gray0, bg = BG },
-	TelescopeBorder = { dark = { fg = gray1, bg = gray1 }, light = { fg = gray7, bg = gray7 } },
-	TelescopePromptBorder = { dark = { fg = gray1 }, light = { fg = gray7 }, bg = BG },
-	TelescopeResultsBorder = { dark = { fg = gray1 }, light = { fg = gray7 }, bg = BG },
-	TelescopePromptNormal = { bg = BG },
+	TelescopeNormal = { fg = gray0, bg = gray9 },
+	TelescopeBorder = { dark = { fg = gray1, bg = gray1 }, light = { fg = gray9, bg = gray9 } },
+    TelescopePromptNormal = { bg = gray8 },
+    TelescopePromptBorder = { dark = { fg = gray1 }, light = { fg = gray8, bg = gray8 } },
+    TelescopeResultsBorder = { dark = { fg = gray1 }, light = { fg = gray9, bg = gray9 } },
 	TelescopePreviewNormal = { bg = BG },
-	TelescopePreviewBorder = { dark = { fg = gray1 }, light = { fg = gray7 }, bg = BG },
+	TelescopePreviewBorder = { dark = { fg = gray1 }, light = { fg = gray9, bg = gray9 } },
 	TelescopeMatching = { style = { "bold" } },
 	TelescopePromptPrefix = { fg = red0, style = { "bold" } },
 	TelescopePromptTitle = { fg = gray9, bg = red1, style = { "bold" } },
@@ -1137,22 +1137,28 @@ local highlight_groups = {
 	rainbowcol5 = { fg = blue0 },
 	rainbowcol6 = { fg = magenta0 },
 	rainbowcol7 = { dark = { fg = purple0 }, light = { fg = purple1 } },
+    TSRainbowRed = {fg = red0},
+    TSRainbowBlue = {fg = blue0},
+    TSRainbowCyan = {fg = turquoise0},
+    TSRainbowGreen = {fg = green0},
+    TSRainbowViolet = {fg = magenta0},
+    TSRainbowYellow = {fg = yellow0},
 
 	--[[ 4.4.24. galaxyline ]]
 	GalaxyTree = { dark = { fg = black1, bg = black1 }, light = { fg = white1, bg = white1 } },
 	GalaxyViMode = { dark = { fg = gray7, bg = gray3 }, light = { fg = gray7, bg = gray9 } },
 	GalaxyBg = { dark = { fg = black0, bg = black0 }, light = { fg = white1, bg = white1 } },
-	GalaxyFg = { dark = { fg = gray7, bg = gray3 }, light = { fg = black0, bg = BG }, style = { "bold" } },
+	GalaxyFg = { dark = { fg = gray7, bg = gray3 }, light = { fg = black0, bg = white0 }, style = { "bold" } },
 	-- GalaxyFgAlt = { dark = { fg = white, bg = gray_darkerer }, light = { fg = gray_medium, bg = whiter } },
 	GalaxyFgAlt = { dark = { fg = gray7, bg = red0 }, light = { fg = gray9, bg = red1 }, style = "bold" },
-	GalaxyFgAlt2 = { dark = { fg = gray7, bg = gray3 }, light = { fg = gray6, bg = BG } },
-	GalaxyYellow = { fg = yellow0, dark = { bg = gray3 }, light = { bg = BG }, style = { "bold" } },
-	GalaxyCyan = { fg = turquoise0, dark = { bg = gray3 }, light = { bg = BG }, style = { "bold" } },
-	GalaxyGreen = { fg = green1, dark = { bg = gray3 }, light = { bg = BG }, style = { "bold" } },
-	GalaxyOrange = { fg = orange0, dark = { bg = gray3 }, light = { bg = BG }, style = { "bold" } },
-	GalaxyMagenta = { fg = magenta0, dark = { bg = gray3 }, light = { bg = BG }, style = { "bold" } },
-	GalaxyBlue = { fg = blue0, dark = { bg = gray3 }, light = { bg = BG }, style = { "bold" } },
-	GalaxyRed = { fg = red0, dark = { bg = gray3 }, light = { bg = BG }, style = { "bold" } },
+	GalaxyFgAlt2 = { dark = { fg = gray7, bg = gray3 }, light = { fg = gray6, bg = white0 } },
+	GalaxyYellow = { fg = yellow0, dark = { bg = gray3 }, light = { bg = white0 }, style = { "bold" } },
+	GalaxyCyan = { fg = turquoise0, dark = { bg = gray3 }, light = { bg = white0 }, style = { "bold" } },
+	GalaxyGreen = { fg = green1, dark = { bg = gray3 }, light = { bg = white0 }, style = { "bold" } },
+	GalaxyOrange = { fg = orange0, dark = { bg = gray3 }, light = { bg = white0 }, style = { "bold" } },
+	GalaxyMagenta = { fg = magenta0, dark = { bg = gray3 }, light = { bg = white0 }, style = { "bold" } },
+	GalaxyBlue = { fg = blue0, dark = { bg = gray3 }, light = { bg = white0 }, style = { "bold" } },
+	GalaxyRed = { fg = red0, dark = { bg = gray3 }, light = { bg = white0 }, style = { "bold" } },
 
 	--[[ 4.4.25 DAP UI]]
 	DapBreakpoint = { fg = red0 },
@@ -1308,6 +1314,11 @@ local highlight_groups = {
 	NotifyWARNBorder = {fg = gray9, bg= gray9},
 	NotifyWARNBody = {fg = black, bg = gray9},
     NotifyBackground = "Pmenu",
+
+	-- [[ 4.4.30 Flash]]
+	FlashBackdrop = { dark = { fg = gray0 }, light = { fg = gray6 }},
+	FlashLabel = "DiffChange",
+
 	-- [[ 4.5 Others ]]
 	FocusedSymbol = { fg = black0, bg = yellow0 },
 	OutlinePreviewBG = { bg = BG },
