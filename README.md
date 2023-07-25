@@ -8,7 +8,7 @@ __A neovim colorscheme based on DMG-01__
 
 Using lazy.nvim:
 
-```
+```lua
 {
 	"git.bim.boats/dmg",
 	lazy = false,
