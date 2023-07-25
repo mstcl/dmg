@@ -1296,6 +1296,8 @@ local highlight_groups = {
 	LocalHighlight = { style = { "undercurl" } },
 	LspSignatureActiveParameter = "Search",
 	LspLens = "Folded",
+	OrgDONE = "DiffAdd",
+	OrgTODO = "DiffDelete",
 }
 
 local terminal_colors = {
