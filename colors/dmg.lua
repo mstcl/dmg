@@ -1286,6 +1286,28 @@ local highlight_groups = {
 		style = { "underline", "bold", color = red0 },
 	},
 
+	-- [[ 4.4.28 Noice]]
+	NoiceCmdlineIcon = "TelescopePromptPrefix",
+	NoiceVirtualText = "NonText",
+
+	-- [[ 4.4.29 Notify]]
+	NotifyINFOIcon = {fg = green0, bg = gray9},
+	NotifyINFOTitle = {fg = green0, bg = gray9},
+	NotifyINFOBody = {fg = black, bg = gray9},
+	NotifyINFOBorder = {fg = gray9, bg= gray9},
+	NotifyERRORIcon = {fg = red0, bg = gray9},
+	NotifyERRORTitle = {fg = red0, bg = gray9},
+	NotifyERRORBorder = {fg = gray9, bg= gray9},
+	NotifyERRORBody = {fg = black, bg = gray9},
+    NotifyTRACEIcon = {fg = magenta0, bg = gray9},
+	NotifyTRACETitle = {fg = magenta0, bg = gray9},
+	NotifyTRACEBorder = {fg = gray9, bg= gray9},
+	NotifyTRACEBody = {fg = black, bg = gray9},
+	NotifyWARNIcon = {fg = orange0, bg = gray9},
+	NotifyWARNTitle = {fg = orange0, bg = gray9},
+	NotifyWARNBorder = {fg = gray9, bg= gray9},
+	NotifyWARNBody = {fg = black, bg = gray9},
+    NotifyBackground = "Pmenu",
 	-- [[ 4.5 Others ]]
 	FocusedSymbol = { fg = black0, bg = yellow0 },
 	OutlinePreviewBG = { bg = BG },
