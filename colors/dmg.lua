@@ -213,7 +213,7 @@ local highlight_groups = {
 	DiagnosticError = "Error",
 	DiagnosticFloatingError = function(self)
 		return { fg = self.ErrorMsg.fg, dark = { bg = gray3 }, light = { bg = white1 } }
-	end Question,
+	end,
 	DiagnosticSignError = function(self)
 		return { fg = self.ErrorMsg.fg, dark = { bg = gray3 }, light = { bg = white1 } }
 	end,
