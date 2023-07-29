@@ -212,44 +212,44 @@ local highlight_groups = {
 	DiagnosticDeprecated = { strikethrough = true },
 	DiagnosticError = "Error",
 	DiagnosticFloatingError = function(self)
-		return { fg = self.ErrorMsg.fg, dark = { bg = gray3 }, light = { bg = white1 } }
+		return { fg = self.ErrorMsg.fg, dark = { bg = white1 }, light = { bg = white1 } }
 	end,
 	DiagnosticSignError = function(self)
-		return { fg = self.ErrorMsg.fg, dark = { bg = gray3 }, light = { bg = white1 } }
+		return { fg = self.ErrorMsg.fg, dark = { bg = white1 }, light = { bg = white1 } }
 	end,
 	DiagnosticVirtualTextError = function(self)
 		return { fg = self.ErrorMsg.fg, bg = red2, style = "italic" }
 	end,
 	DiagnosticWarn = "Warning",
 	DiagnosticFloatingWarn = function(self)
-		return { fg = self.WarningMsg.fg, dark = { bg = gray3 }, light = { bg = white1 } }
+		return { fg = self.WarningMsg.fg, dark = { bg = white1 }, light = { bg = white1 } }
 	end
 	,
 	DiagnosticSignWarn = function(self)
-		return { fg = self.WarningMsg.fg, dark = { bg = gray3 }, light = { bg = white1 } }
+		return { fg = self.WarningMsg.fg, dark = { bg = white1 }, light = { bg = white1 } }
 	end,
 	DiagnosticVirtualTextWarn = function(self)
 		return { fg = self.WarningMsg.fg, bg = white1, style = "italic" }
 	end,
 	DiagnosticHint = "Hint",
 	DiagnosticFloatingHint = function(self)
-		return { fg = self.HintMsg.fg, dark = { bg = gray3 }, light = { bg = white1 } }
+		return { fg = self.HintMsg.fg, dark = { bg = white1 }, light = { bg = white1 } }
 	end,
 	DiagnosticSignHint = function(self)
-		return { fg = self.HintMsg.fg, dark = { bg = gray3 }, light = { bg = white1 } }
+		return { fg = self.HintMsg.fg, dark = { bg = white1 }, light = { bg = white1 } }
 	end,
 	DiagnosticVirtualTextHint = function(self)
-		return { fg = self.HintMsg.fg, bg = gray3, style = "italic" }
+		return { fg = self.HintMsg.fg, bg = white1, style = "italic" }
 	end,
 	DiagnosticInfo = "Info",
 	DiagnosticFloatingInfo = function(self)
-		return { fg = self.InfoMsg.fg, dark = { bg = gray3 }, light = { bg = white1 } }
+		return { fg = self.InfoMsg.fg, dark = { bg = white1 }, light = { bg = white1 } }
 	end,
 	DiagnosticSignInfo = function(self)
-		return { fg = self.InfoMsg.fg, dark = { bg = gray3 }, light = { bg = white1 } }
+		return { fg = self.InfoMsg.fg, dark = { bg = white1 }, light = { bg = white1 } }
 	end,
 	DiagnosticVirtualTextInfo = function(self)
-		return { fg = self.InfoMsg.fg, bg = gray3, style = "italic" }
+		return { fg = self.InfoMsg.fg, bg = white1, style = "italic" }
 	end,
 	DiagnosticUnderlineError = { style = { "undercurl", color = red0 } },
 	DiagnosticUnderlineHint = { style = { "undercurl", color = magenta0 } },
