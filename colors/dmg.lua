@@ -223,7 +223,7 @@ local highlight_groups = {
 		return { fg = self.WarningMsg.fg, dark = { bg = gray3 }, light = { bg = white1 } }
 	end,
 	DiagnosticVirtualTextWarn = function(self)
-		return { fg = self.WarningMsg.fg, bg = orange2, style = "italic" }
+		return { fg = self.WarningMsg.fg, bg = white1, style = "italic" }
 	end,
 	DiagnosticHint = "Hint",
 	DiagnosticFloatingHint = function(self)
