@@ -188,8 +188,12 @@ local highlight_groups = {
 	SpellBad = { style = { "undercurl", color = red0 } },
 	SpellCap = { style = { "undercurl", color = green1 } },
 	SpellLocal = { style = { "undercurl", color = yellow0 } },
-	SpellRare = { style = { "undercurl", color = blue0 } },
+	SpellRare = { style = { "undercurl", color = blue0 } }
 
+	
+	,
+
+	
 	--[[ 4.2.9. Conditional Column Highlighting]]
 	ColorColumn = { dark = { bg = gray1 }, light = { bg = gray9 } },
 	SignColumn = { dark = { bg = gray3 }, light = { bg = white1 } },
@@ -198,7 +202,8 @@ local highlight_groups = {
 	ErrorMsg = { dark = { fg = red0 }, light = { fg = red1 }, style = "bold" },
 	HintMsg = { dark = { fg = magenta0 }, light = { fg = magenta1 }, style = "italic" },
 	InfoMsg = { dark = { fg = pink0 }, light = { fg = pink1 }, style = "italic" },
-	ModeMsg = { dark = { fg = yellow0 }, light = { fg = yellow1 } },
+	ModeMsg = { dark = { fg = yellow0 }, light = { fg = yellow1 } }
+	,
 	MoreMsg = { fg = gray8 },
 	WarningMsg = { dark = { fg = orange0 }, light = { fg = orange1 }, style = "bold" },
 	Question = { dark = { fg = turquoise0 }, light = { fg = turquoise1 }, style = "bold" },
@@ -208,17 +213,18 @@ local highlight_groups = {
 	DiagnosticError = "Error",
 	DiagnosticFloatingError = function(self)
 		return { fg = self.ErrorMsg.fg, dark = { bg = gray3 }, light = { bg = white1 } }
-	end,
+	end Question,
 	DiagnosticSignError = function(self)
 		return { fg = self.ErrorMsg.fg, dark = { bg = gray3 }, light = { bg = white1 } }
 	end,
 	DiagnosticVirtualTextError = function(self)
 		return { fg = self.ErrorMsg.fg, bg = red2, style = "italic" }
-	end,
+	end q,
 	DiagnosticWarn = "Warning",
 	DiagnosticFloatingWarn = function(self)
 		return { fg = self.WarningMsg.fg, dark = { bg = gray3 }, light = { bg = white1 } }
-	end,
+	end
+	,
 	DiagnosticSignWarn = function(self)
 		return { fg = self.WarningMsg.fg, dark = { bg = gray3 }, light = { bg = white1 } }
 	end,
@@ -243,7 +249,7 @@ local highlight_groups = {
 		return { fg = self.InfoMsg.fg, dark = { bg = gray3 }, light = { bg = white1 } }
 	end,
 	DiagnosticVirtualTextInfo = function(self)
-		return { fg = self.InfoMsg.fg, bg = pink3, style = "italic" }
+		return { fg = self.InfoMsg.fg, bg = gray3, style = "italic" }
 	end,
 	DiagnosticUnderlineError = { style = { "undercurl", color = red0 } },
 	DiagnosticUnderlineHint = { style = { "undercurl", color = magenta0 } },
