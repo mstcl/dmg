@@ -219,7 +219,7 @@ local highlight_groups = {
 	end,
 	DiagnosticVirtualTextError = function(self)
 		return { fg = self.ErrorMsg.fg, bg = red2, style = "italic" }
-	end q,
+	end,
 	DiagnosticWarn = "Warning",
 	DiagnosticFloatingWarn = function(self)
 		return { fg = self.WarningMsg.fg, dark = { bg = gray3 }, light = { bg = white1 } }
