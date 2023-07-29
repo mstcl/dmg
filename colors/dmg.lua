@@ -1333,7 +1333,7 @@ local highlight_groups = {
 	Headline1 = { light = { bg = gray9 } },
 	Headline2 = { light = { bg = turquoise0 } },
 	Headline3 = { light = { bg = pink0 } },
-	MiniCursorword = {light = {bg = gray8}, style = {"underline"}, color = black0},
+	MiniCursorword = {light = {bg = changebg_light}},
 }
 
 local terminal_colors = {
