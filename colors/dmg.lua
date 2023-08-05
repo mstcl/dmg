@@ -908,7 +908,7 @@ local highlight_groups = {
 	IndentBlanklineChar = { dark = { fg = gray2 }, light = { fg = gray9 } },
 	IndentBlanklineSpaceChar = "IndentBlanklineChar",
 	IndentBlanklineSpaceCharBlankLine = "IndentBlanklineChar",
-	IndentBlanklineContextChar = { dark = { fg = gray0 }, light = { fg = gray8 } },
+	IndentBlanklineContextChar = { dark = { fg = gray0 }, light = { fg = gray7 } },
 
 	--[[ 4.4.14. trouble.nvim ]]
 	TroubleCount = function(self)
