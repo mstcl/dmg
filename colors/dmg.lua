@@ -56,7 +56,7 @@ local NONE = {}
 local highlight_groups = {
 	--[[ 4.1. Text Analysis ]]
 	Comment = { dark = { fg = gray0 }, light = { fg = gray6 }, style = "italic" },
-	NonText = { dark = { fg = gray2 }, light = { fg = gray9 } },
+	NonText = { dark = { fg = gray2 }, light = { fg = white0 } },
 	EndOfBuffer = "NonText",
 	Whitespace = "NonText",
 
@@ -132,7 +132,7 @@ local highlight_groups = {
 	WinBar = { dark = { bg = gray3 }, light = { bg = white0 } },
 
 	--[[ 4.2.2. Separators]]
-	VertSplit = { dark = { bg = gray2, fg = gray2 }, light = { bg = gray9, fg = gray9 } },
+	VertSplit = { dark = { bg = gray2, fg = gray2 }, light = { bg = white1, fg = gray9 } },
 	TabLine = { fg = gray6, dark = { bg = gray4 }, light = { bg = gray8 }, style = "bold" },
 	TabLineFill = { dark = { fg = black1, bg = black1 }, light = { fg = white1, bg = white1 } },
 	TabLineSel = highlight_group_normal,
@@ -188,12 +188,8 @@ local highlight_groups = {
 	SpellBad = { style = { "undercurl", color = red0 } },
 	SpellCap = { style = { "undercurl", color = green1 } },
 	SpellLocal = { style = { "undercurl", color = yellow0 } },
-	SpellRare = { style = { "undercurl", color = blue0 } }
+	SpellRare = { style = { "undercurl", color = blue0 } } ,
 
-	
-	,
-
-	
 	--[[ 4.2.9. Conditional Column Highlighting]]
 	ColorColumn = { dark = { bg = gray1 }, light = { bg = gray9 } },
 	SignColumn = { dark = { bg = gray3 }, light = { bg = white1 } },
@@ -211,46 +207,21 @@ local highlight_groups = {
 	--[[ 4.2.11. LSP / Diagnostics ]]
 	DiagnosticDeprecated = { strikethrough = true },
 	DiagnosticError = "Error",
-	DiagnosticFloatingError = function(self)
-		return { fg = self.ErrorMsg.fg, dark = { bg = white1 }, light = { bg = white1 } }
-	end,
-	DiagnosticSignError = function(self)
-		return { fg = self.ErrorMsg.fg, dark = { bg = white1 }, light = { bg = white1 } }
-	end,
-	DiagnosticVirtualTextError = function(self)
-		return { fg = self.ErrorMsg.fg, bg = red2, style = "italic" }
-	end,
+	DiagnosticFloatingError = { dark = { fg = red0, bg = white1 }, light = { fg = red1, bg = white1 } },
+	DiagnosticSignError = { dark = { fg = red0, bg = white1 }, light = { fg = red1, bg = white1 } },
+	DiagnosticVirtualTextError = { dark = { fg = red0, bg = white1 }, light = { fg = red1, bg = white1 }, style = "italic"},
 	DiagnosticWarn = "Warning",
-	DiagnosticFloatingWarn = function(self)
-		return { fg = self.WarningMsg.fg, dark = { bg = white1 }, light = { bg = white1 } }
-	end
-	,
-	DiagnosticSignWarn = function(self)
-		return { fg = self.WarningMsg.fg, dark = { bg = white1 }, light = { bg = white1 } }
-	end,
-	DiagnosticVirtualTextWarn = function(self)
-		return { fg = self.WarningMsg.fg, bg = white1, style = "italic" }
-	end,
+	DiagnosticFloatingWarn = { dark = { fg = orange0, bg = white1 }, light = { fg = orange1, bg = white1 } },
+	DiagnosticSignWarn = { dark = { fg = orange0, bg = white1 }, light = { fg = orange1, bg = white1 } },
+	DiagnosticVirtualTextWarn = { dark = { fg = orange0, bg = white1 }, light = { fg = orange1, bg = white1 }, style = "italic" },
 	DiagnosticHint = "Hint",
-	DiagnosticFloatingHint = function(self)
-		return { fg = self.HintMsg.fg, dark = { bg = white1 }, light = { bg = white1 } }
-	end,
-	DiagnosticSignHint = function(self)
-		return { fg = self.HintMsg.fg, dark = { bg = white1 }, light = { bg = white1 } }
-	end,
-	DiagnosticVirtualTextHint = function(self)
-		return { fg = self.HintMsg.fg, bg = white1, style = "italic" }
-	end,
-	DiagnosticInfo = "Info",
-	DiagnosticFloatingInfo = function(self)
-		return { fg = self.InfoMsg.fg, dark = { bg = white1 }, light = { bg = white1 } }
-	end,
-	DiagnosticSignInfo = function(self)
-		return { fg = self.InfoMsg.fg, dark = { bg = white1 }, light = { bg = white1 } }
-	end,
-	DiagnosticVirtualTextInfo = function(self)
-		return { fg = self.InfoMsg.fg, bg = white1, style = "italic" }
-	end,
+	DiagnosticFloatingHint = { dark = { fg = magenta0, bg = white1 }, light = { fg = magenta1, bg = white1 } },
+	DiagnosticSignHint = { dark = { fg = magenta0, bg = white1 }, light = { fg = magenta1, bg = white1 } },
+	DiagnosticVirtualTextHint = { dark = { fg = magenta0, bg = white1 }, light = { fg = magenta1, bg = white1 }, style = "italic"},
+    DiagnosticInfo = "Info",
+	DiagnosticFloatingInfo = {dark = { fg = pink0, bg = white1 }, light = { fg = pink1, bg = white1 } },
+	DiagnosticSignInfo = {dark = { fg = pink0, bg = white1 }, light = { fg = pink1, bg = white1 } },
+	DiagnosticVirtualTextInfo = {dark = { fg = pink0, bg = white1 }, light = { fg = pink1, bg = white1 }, style = "italic" },
 	DiagnosticUnderlineError = { style = { "undercurl", color = red0 } },
 	DiagnosticUnderlineHint = { style = { "undercurl", color = magenta0 } },
 	DiagnosticUnderlineInfo = { style = { "undercurl", color = blue0 } },
@@ -934,14 +905,16 @@ local highlight_groups = {
 	TargetWord = "Title",
 
 	--[[ 4.4.13. indent-blankline.nvim ]]
-	IndentBlanklineChar = { dark = { fg = gray2 }, light = { fg = gray8 } },
+	IndentBlanklineChar = { dark = { fg = gray2 }, light = { fg = gray9 } },
 	IndentBlanklineSpaceChar = "IndentBlanklineChar",
 	IndentBlanklineSpaceCharBlankLine = "IndentBlanklineChar",
-	IndentBlanklineContextChar = { dark = { fg = gray0 }, light = { fg = gray8 } },
+	IndentBlanklineContextChar = { dark = { fg = gray0 }, light = { fg = gray9 } },
+
 	--[[ 4.4.14. trouble.nvim ]]
 	TroubleCount = function(self)
 		return vim.tbl_extend("force", self.Number, { style = "undercurl" })
 	end,
+
 	--[[ 4.4.14. todo-comments.nvim ]]
 	TodoFgFIX = function(self)
 		return { fg = self.ErrorMsg.fg }
@@ -1304,20 +1277,20 @@ local highlight_groups = {
 	-- [[ 4.4.29 Notify]]
 	NotifyINFOIcon = { fg = green0, bg = gray9 },
 	NotifyINFOTitle = { fg = green0, bg = gray9 },
-	NotifyINFOBody = { fg = black, bg = gray9 },
+	NotifyINFOBody = { fg = black0, bg = gray9 },
 	NotifyINFOBorder = { fg = gray9, bg = gray9 },
 	NotifyERRORIcon = { fg = red0, bg = gray9 },
 	NotifyERRORTitle = { fg = red0, bg = gray9 },
 	NotifyERRORBorder = { fg = gray9, bg = gray9 },
-	NotifyERRORBody = { fg = black, bg = gray9 },
+	NotifyERRORBody = { fg = black0, bg = gray9 },
 	NotifyTRACEIcon = { fg = magenta0, bg = gray9 },
 	NotifyTRACETitle = { fg = magenta0, bg = gray9 },
 	NotifyTRACEBorder = { fg = gray9, bg = gray9 },
-	NotifyTRACEBody = { fg = black, bg = gray9 },
+	NotifyTRACEBody = { fg = black0, bg = gray9 },
 	NotifyWARNIcon = { fg = orange0, bg = gray9 },
 	NotifyWARNTitle = { fg = orange0, bg = gray9 },
 	NotifyWARNBorder = { fg = gray9, bg = gray9 },
-	NotifyWARNBody = { fg = black, bg = gray9 },
+	NotifyWARNBody = { fg = black0, bg = gray9 },
 	NotifyBackground = "Pmenu",
 
 	-- [[ 4.4.30 Flash]]
