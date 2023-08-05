@@ -56,7 +56,7 @@ local NONE = {}
 local highlight_groups = {
 	--[[ 4.1. Text Analysis ]]
 	Comment = { dark = { fg = gray0 }, light = { fg = gray6 }, style = "italic" },
-	NonText = { dark = { fg = gray2 }, light = { fg = white0 } },
+	NonText = { dark = { fg = gray2 }, light = { fg = gray9 } },
 	EndOfBuffer = "NonText",
 	Whitespace = "NonText",
 
