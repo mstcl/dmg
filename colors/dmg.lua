@@ -1057,6 +1057,7 @@ local highlight_groups = {
 	TelescopeNormal = { fg = gray0, bg = gray9 },
 	TelescopeBorder = { dark = { fg = gray1, bg = gray1 }, light = { fg = gray9, bg = gray9 } },
 	TelescopePromptNormal = { bg = gray8 },
+	TelescopePromptCounter = { bg = gray8, fg = gray0 },
 	TelescopePromptBorder = { dark = { fg = gray1 }, light = { fg = gray8, bg = gray8 } },
 	TelescopeResultsBorder = { dark = { fg = gray1 }, light = { fg = gray9, bg = gray9 } },
 	TelescopePreviewNormal = { dark = { bg = gray3 }, light = { bg = white0 } },
