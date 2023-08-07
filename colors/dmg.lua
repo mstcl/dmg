@@ -18,29 +18,21 @@ local white0 = { "#ded8d3", 15, "white" }
 local white1 = { "#e9e5e2", 15, "white" }
 local red0 = { "#752c5f", 196, "red" }
 local red1 = { "#630e49", 124, "darkred" }
-local red2 = { "#261A14", 124, "darkred" }
 local orange0 = { "#844242", 208, "darkyellow" }
 local orange1 = { "#6a2a2a", 208, "darkyellow" }
-local orange2 = { "#2E2520", 208, "darkyellow" }
-local yellow0 = orange0
-local yellow1 = orange1
-local green0 = { "#3b673f", 72, "green" }
-local green1 = { "#144119", 83, "darkgreen" }
-local green2 = { "#08260C", 72, "darkgreen" }
-local turquoise0 = { "#97ad8f", 38, "cyan" }
-local turquoise1 = { "#749176", 33, "darkcyan" }
+local green0 = { "#24752d", 72, "green" }
+local green1 = { "#1e6226", 83, "darkgreen" }
+local green2 = { "#184e1e", 83, "darkgreen" }
+local turquoise0 = { "#87591a", 38, "cyan" }
+local turquoise1 = { "#522b00", 33, "darkcyan" }
 local blue0 = { "#483d8b", 87, "blur" }
-local blue1 = { "#1d0e53", 63, "darkblue" }
-local magenta0 = { "#756a94", 126, "magenta" }
-local magenta1 = { "#494459", 126, "darkmagenta" }
-local magenta2 = { "#2D2A30", 126, "magenta" }
-local pink0 = { "#aba2b9", 38, "white" }
-local pink1 = { "#898294", 162, "magenta" }
-local pink3 = magenta2
-local purple0 = pink0
-local purple1 = pink1
-local addfg = { "#605f1f", 51, "cyan" }
-local addbg = { "#393913", 51, "cyan" }
+local blue1 = { "#26126d", 63, "darkblue" }
+local magenta0 = { "#baa6b1", 126, "magenta" }
+local magenta1 = { "#53424c", 126, "darkmagenta" }
+local pink0 = { "#b5a5c7", 38, "white" }
+local pink1 = { "#836e9f", 162, "magenta" }
+local addfg = { "#4a8000", 51, "cyan" }
+local addbg = { "#315400", 51, "cyan" }
 local addbg_light = { "#CBE5B8", 51, "cyan" }
 local changefg = { "#6b4255", 51, "cyan" }
 local changebg = { "#4a3c42", 51, "cyan" }
@@ -64,8 +56,8 @@ local highlight_groups = {
 	Constant = { dark = { fg = blue0 }, light = { fg = blue1 } },
 	String = { dark = { fg = green0 }, light = { fg = green2 }, style = "italic" },
 	Character = { dark = { fg = green0 }, light = { fg = green2 } },
-	Number = { dark = { fg = yellow0 }, light = { fg = yellow1 } },
-	Boolean = { dark = { fg = yellow0 }, light = { fg = yellow1 } },
+	Number = { dark = { fg = orange0 }, light = { fg = orange1 } },
+	Boolean = { dark = { fg = orange0 }, light = { fg = orange1 } },
 	Float = "Number",
 
 	--[[ 4.1.2. Identifiers]]
@@ -78,7 +70,7 @@ local highlight_groups = {
 	Repeat = { dark = { fg = red0 }, light = { fg = red1 }, style = "italic" },
 	Label = { dark = { fg = pink0 }, light = { fg = pink1 }, style = "bold" },
 	Operator = { dark = { fg = gray5 }, light = { fg = gray0 } },
-	Keyword = { dark = { fg = purple0 }, light = { fg = purple1 } },
+	Keyword = { dark = { fg = pink0 }, light = { fg = pink1 } },
 	Exception = { dark = { fg = red0 }, light = { fg = red1 }, style = "bold" },
 	Noise = "Delimiter",
 
@@ -87,13 +79,13 @@ local highlight_groups = {
 	include = { dark = { fg = pink0 }, light = { fg = pink1 }, style = { "nocombine", "italic" } },
 	Define = { dark = { fg = blue0 }, light = { fg = blue1 }, style = "nocombine" },
 	Macro = { fg = blue0, style = "italic" },
-	PreCondit = { dark = { fg = yellow1 }, light = { fg = orange1 }, style = "italic" },
+	PreCondit = { dark = { fg = orange1 }, light = { fg = orange1 }, style = "italic" },
 
 	--[[ 4.1.5. Semantics]]
-	Type = { dark = { fg = yellow0 }, light = { fg = yellow1 } },
+	Type = { dark = { fg = orange0 }, light = { fg = orange1 } },
 	StorageClass = { dark = { fg = orange0 }, light = { fg = orange1 }, style = "bold" },
-	Structure = { dark = { fg = yellow0 }, light = { fg = yellow1 }, style = "bold" },
-	Typedef = { dark = { fg = yellow1 }, light = { fg = orange1 }, style = "italic" },
+	Structure = { dark = { fg = orange0 }, light = { fg = orange1 }, style = "bold" },
+	Typedef = { dark = { fg = orange1 }, light = { fg = orange1 }, style = "italic" },
 
 	--[[ 4.1.6. Edge Cases]]
 	Special = { dark = { fg = blue0 }, light = { fg = blue1 }, style = "bold" },
@@ -112,7 +104,7 @@ local highlight_groups = {
 	},
 	Ignore = { fg = gray0 },
 	Error = { fg = black0, bg = red0, style = { "bold", "underline", color = black0 } },
-	Todo = { fg = white1, bg = yellow0, style = { "bold" } },
+	Todo = { fg = white1, bg = orange0, style = { "bold" } },
 	Hint = { fg = black0, bg = magenta0, style = "bold" },
 	Info = { fg = black0, bg = pink0, style = "bold" },
 	Warning = { fg = black0, bg = orange0, style = "bold" },
@@ -173,7 +165,7 @@ local highlight_groups = {
 	DiffChange = { fg = changefg, dark = { bg = changebg }, light = { bg = changebg_light } },
 	DiffDelete = { fg = delfg, dark = { bg = delbg }, light = { bg = delbg_light } },
 	DiffText = function(self)
-		return { fg = self.DiffAdd.fg, bg = yellow0 }
+		return { fg = self.DiffAdd.fg, bg = orange0 }
 	end,
 
 	--[[ 4.2.7. Searching]]
@@ -185,8 +177,8 @@ local highlight_groups = {
 	--[[ 4.2.8. Spelling]]
 	SpellBad = { style = { "undercurl", color = red0 } },
 	SpellCap = { style = { "undercurl", color = green1 } },
-	SpellLocal = { style = { "undercurl", color = yellow0 } },
-	SpellRare = { style = { "undercurl", color = blue0 } } ,
+	SpellLocal = { style = { "undercurl", color = orange0 } },
+	SpellRare = { style = { "undercurl", color = blue0 } },
 
 	--[[ 4.2.9. Conditional Column Highlighting]]
 	ColorColumn = { dark = { bg = gray1 }, light = { bg = gray9 } },
@@ -196,8 +188,7 @@ local highlight_groups = {
 	ErrorMsg = { dark = { fg = red0 }, light = { fg = red1 }, style = "bold" },
 	HintMsg = { dark = { fg = magenta0 }, light = { fg = magenta1 }, style = "italic" },
 	InfoMsg = { dark = { fg = pink0 }, light = { fg = pink1 }, style = "italic" },
-	ModeMsg = { dark = { fg = yellow0 }, light = { fg = yellow1 } }
-	,
+	ModeMsg = { dark = { fg = orange0 }, light = { fg = orange1 } },
 	MoreMsg = { fg = gray8 },
 	WarningMsg = { dark = { fg = orange0 }, light = { fg = orange1 }, style = "bold" },
 	Question = { dark = { fg = turquoise0 }, light = { fg = turquoise1 }, style = "bold" },
@@ -207,19 +198,35 @@ local highlight_groups = {
 	DiagnosticError = "Error",
 	DiagnosticFloatingError = { dark = { fg = red0, bg = white1 }, light = { fg = red1, bg = white1 } },
 	DiagnosticSignError = { dark = { fg = red0, bg = white1 }, light = { fg = red1, bg = white1 } },
-	DiagnosticVirtualTextError = { dark = { fg = red0, bg = white1 }, light = { fg = red1, bg = white1 }, style = "italic"},
+	DiagnosticVirtualTextError = {
+		dark = { fg = red0, bg = white1 },
+		light = { fg = red1, bg = white1 },
+		style = "italic",
+	},
 	DiagnosticWarn = "Warning",
 	DiagnosticFloatingWarn = { dark = { fg = orange0, bg = white1 }, light = { fg = orange1, bg = white1 } },
 	DiagnosticSignWarn = { dark = { fg = orange0, bg = white1 }, light = { fg = orange1, bg = white1 } },
-	DiagnosticVirtualTextWarn = { dark = { fg = orange0, bg = white1 }, light = { fg = orange1, bg = white1 }, style = "italic" },
+	DiagnosticVirtualTextWarn = {
+		dark = { fg = orange0, bg = white1 },
+		light = { fg = orange1, bg = white1 },
+		style = "italic",
+	},
 	DiagnosticHint = "Hint",
 	DiagnosticFloatingHint = { dark = { fg = magenta0, bg = white1 }, light = { fg = magenta1, bg = white1 } },
 	DiagnosticSignHint = { dark = { fg = magenta0, bg = white1 }, light = { fg = magenta1, bg = white1 } },
-	DiagnosticVirtualTextHint = { dark = { fg = magenta0, bg = white1 }, light = { fg = magenta1, bg = white1 }, style = "italic"},
-    DiagnosticInfo = "Info",
-	DiagnosticFloatingInfo = {dark = { fg = pink0, bg = white1 }, light = { fg = pink1, bg = white1 } },
-	DiagnosticSignInfo = {dark = { fg = pink0, bg = white1 }, light = { fg = pink1, bg = white1 } },
-	DiagnosticVirtualTextInfo = {dark = { fg = pink0, bg = white1 }, light = { fg = pink1, bg = white1 }, style = "italic" },
+	DiagnosticVirtualTextHint = {
+		dark = { fg = magenta0, bg = white1 },
+		light = { fg = magenta1, bg = white1 },
+		style = "italic",
+	},
+	DiagnosticInfo = "Info",
+	DiagnosticFloatingInfo = { dark = { fg = pink0, bg = white1 }, light = { fg = pink1, bg = white1 } },
+	DiagnosticSignInfo = { dark = { fg = pink0, bg = white1 }, light = { fg = pink1, bg = white1 } },
+	DiagnosticVirtualTextInfo = {
+		dark = { fg = pink0, bg = white1 },
+		light = { fg = pink1, bg = white1 },
+		style = "italic",
+	},
 	DiagnosticUnderlineError = { style = { "undercurl", color = red0 } },
 	DiagnosticUnderlineHint = { style = { "undercurl", color = magenta0 } },
 	DiagnosticUnderlineInfo = { style = { "undercurl", color = blue0 } },
@@ -468,10 +475,10 @@ local highlight_groups = {
 	markdownHeadingDelimiter = "NonText",
 	markdownH1 = { bg = red0, fg = black0, style = { "bold", "undercurl" } },
 	markdownH2 = { bg = orange0, fg = black0, style = { "bold", "undercurl" } },
-	markdownH3 = { bg = yellow0, fg = black0, style = { "bold", "undercurl" } },
+	markdownH3 = { bg = orange0, fg = black0, style = { "bold", "undercurl" } },
 	markdownH4 = { bg = turquoise1, fg = black0, style = { "bold", "undercurl" } },
 	markdownH5 = { bg = blue1, fg = black0, style = { "bold", "undercurl" } },
-	markdownH6 = { bg = purple0, fg = black0, style = { "bold", "undercurl" } },
+	markdownH6 = { bg = pink0, fg = black0, style = { "bold", "undercurl" } },
 	markdownLinkDelimiter = "Delimiter",
 	markdownLinkTextDelimiter = "markdownLinkDelimiter",
 	markdownUrl = "Underlined",
@@ -816,7 +823,7 @@ local highlight_groups = {
 	["@tag"] = "Tag",
 	["@function"] = "Function",
 	["@field"] = { dark = { fg = gray7 }, light = { fg = gray1 } },
-	["@exception"] = { fg = purple0, style = "italic" },
+	["@exception"] = { fg = pink0, style = "italic" },
 	["@function.macro"] = { dark = { fg = red0 }, light = { fg = red1 } },
 	["@string.escape"] = "Character",
 	["@string.regex"] = "SpecialChar",
@@ -830,7 +837,7 @@ local highlight_groups = {
 	["@keyword"] = { dark = { fg = blue0 }, light = { fg = blue1 }, style = "italic" },
 	["@keyword.function"] = { dark = { fg = red0 }, light = { fg = red1 }, style = "italic" },
 	["@keyword.return"] = { dark = { fg = red0 }, light = { fg = red1 }, style = "italic" },
-	["@include"] = { dark = { fg = purple0 }, light = { fg = purple1 }, style = "italic" },
+	["@include"] = { dark = { fg = pink0 }, light = { fg = pink1 }, style = "italic" },
 	["@label"] = { fg = blue0 },
 	["@namespace"] = "Directory",
 	["@error"] = { fg = red0, style = { "undercurl", color = red0 } },
@@ -846,8 +853,8 @@ local highlight_groups = {
 	--[[ 4.4.9. barbar.nvim ]]
 	BufferCurrent = { dark = { fg = gray5, bg = gray3 }, light = { fg = gray0, bg = white0 }, style = "bold" },
 	BufferCurrentMod = {
-		dark = { fg = yellow0 },
-		light = { fg = yellow1 },
+		dark = { fg = orange0 },
+		light = { fg = orange1 },
 		bg = white0,
 		style = { "italic", "bold" },
 	},
@@ -971,13 +978,13 @@ local highlight_groups = {
 	CmpItemAbbrMatchFuzzy = { fg = blue0 },
 	CmpItemKind = { bg = turquoise1, fg = gray9 },
 	CmpItemKindVariable = { bg = blue0, fg = gray9 },
-	CmpItemKindInterface = { bg = yellow0, fg = gray9 },
+	CmpItemKindInterface = { bg = orange0, fg = gray9 },
 	CmpItemKindText = { bg = magenta0, fg = gray9 },
 	CmpItemKindFunction = { bg = pink1, fg = gray9 },
 	CmpItemKindMethod = { bg = pink1, fg = gray9 },
 	CmpItemKindKeyword = { bg = orange0, fg = gray9 },
 	CmpItemKindProperty = { bg = green2, fg = gray9 },
-	CmpItemKindUnit = { bg = purple1, fg = gray9 },
+	CmpItemKindUnit = { bg = pink1, fg = gray9 },
 	CmpItemAbbrDefault = "Ignore",
 	CmpItemAbbrMatchDefault = "Underlined",
 	CmpItemAbbrMatchFuzzyDefault = {
@@ -986,21 +993,21 @@ local highlight_groups = {
 	},
 	CmpItemKindDefault = "Type",
 	CmpItemKindClass = { bg = blue0, fg = gray9 },
-	CmpItemKindColor = { bg = yellow0, fg = gray9 },
+	CmpItemKindColor = { bg = orange0, fg = gray9 },
 	CmpItemKindConstant = { bg = magenta0, fg = gray9 },
 	CmpItemKindConstructor = { bg = pink1, fg = gray9 },
 	CmpItemKindEnum = { bg = pink1, fg = gray9 },
 	CmpItemKindEnumMember = { bg = orange0, fg = gray9 },
 	CmpItemKindEvent = { bg = green2, fg = gray9 },
-	CmpItemKindField = { bg = purple1, fg = gray9 },
+	CmpItemKindField = { bg = pink1, fg = gray9 },
 	CmpItemKindFile = { bg = blue0, fg = gray9 },
-	CmpItemKindFolder = { bg = yellow0, fg = gray9 },
+	CmpItemKindFolder = { bg = orange0, fg = gray9 },
 	CmpItemKindModule = { bg = magenta0, fg = gray9 },
 	CmpItemKindOperator = { bg = pink1, fg = gray9 },
 	CmpItemKindReference = { bg = pink1, fg = gray9 },
 	CmpItemKindSnippet = { bg = orange0, fg = gray9 },
 	CmpItemKindStruct = { bg = green2, fg = gray9 },
-	CmpItemKindTypeParameter = { bg = purple1, fg = gray9 },
+	CmpItemKindTypeParameter = { bg = pink1, fg = gray9 },
 	CmpItemKindValue = { bg = blue0, fg = gray9 },
 	CmpWindowScrollThumb = { fg = gray7, style = "bold" },
 
@@ -1023,8 +1030,8 @@ local highlight_groups = {
 	AlphaButtons = { dark = { fg = gray5 }, light = { fg = gray6 }, style = { "bold" } },
 
 	--[[ 4.4.18. dev-icons ]]
-	DevIconJS = { fg = yellow0 },
-	DevIconJson = { fg = yellow1 },
+	DevIconJS = { fg = orange0 },
+	DevIconJson = { fg = orange1 },
 	DevIconLua = { fg = blue0 },
 	DevIconCpp = { fg = blue1 },
 	DevIconPy = { fg = blue0 },
@@ -1033,7 +1040,7 @@ local highlight_groups = {
 	DevIconVim = { fg = green1 },
 	DevIconVimrc = { fg = green1 },
 	DevIconTerminal = { fg = green1 },
-	DevIconConf = { fg = yellow0 },
+	DevIconConf = { fg = orange0 },
 	DevIconBash = { fg = pink1 },
 	DevIconZshrc = { fg = blue0 },
 	DevIconZsh = { fg = blue0 },
@@ -1043,7 +1050,7 @@ local highlight_groups = {
 	DevIconTxt = { fg = turquoise1 },
 	DevIconTex = { fg = green2 },
 	DevIconConfiguration = { fg = gray5 },
-	DevIconH = { fg = purple1 },
+	DevIconH = { fg = pink1 },
 	DevIconDefault = { fg = gray6 },
 
 	--[[ 4.4.19. telescope ]]
@@ -1077,14 +1084,14 @@ local highlight_groups = {
 
 	--[[ 4.4.21. nvim-tree ]]
 	NvimTreeNormal = highlight_group_normal,
-	NvimTreeRootFolder = { fg = purple1 },
+	NvimTreeRootFolder = { fg = pink1 },
 	NvimTreeOpenedFolderName = { dark = { fg = gray7 }, light = { fg = gray2 }, style = { "bold" } },
 	NvimTreeEmptyFolderName = { fg = gray5 },
 	NvimTreeFolderName = { dark = { fg = blue0 }, light = { fg = blue1 }, style = { "bold" } },
 	NvimTreeGitDirty = { fg = red0 },
 	NvimTreeGitStaged = { fg = green1 },
-	NvimTreeGitMerge = { fg = purple1 },
-	NvimTreeGitRenamed = { fg = yellow0 },
+	NvimTreeGitMerge = { fg = pink1 },
+	NvimTreeGitRenamed = { fg = orange0 },
 	NvimTreeGitNew = { fg = blue0 },
 	NvimTreeGitDeleted = { fg = red0 },
 	NvimTreeFolderIcon = { fg = blue0 },
@@ -1110,17 +1117,17 @@ local highlight_groups = {
 	--[[ 4.4.23. rainbow ]]
 	rainbowcol1 = { fg = red1 },
 	rainbowcol2 = { fg = turquoise0 },
-	rainbowcol3 = { fg = yellow0 },
+	rainbowcol3 = { fg = orange0 },
 	rainbowcol4 = { fg = green2 },
 	rainbowcol5 = { fg = blue0 },
 	rainbowcol6 = { fg = magenta0 },
-	rainbowcol7 = { dark = { fg = purple0 }, light = { fg = purple1 } },
+	rainbowcol7 = { dark = { fg = pink0 }, light = { fg = pink1 } },
 	TSRainbowRed = { fg = red0 },
 	TSRainbowBlue = { fg = blue0 },
 	TSRainbowCyan = { fg = turquoise0 },
 	TSRainbowGreen = { fg = green0 },
 	TSRainbowViolet = { fg = magenta0 },
-	TSRainbowYellow = { fg = yellow0 },
+	TSRainbowYellow = { fg = orange0 },
 
 	--[[ 4.4.24. galaxyline ]]
 	GalaxyTree = { dark = { fg = black1, bg = black1 }, light = { fg = white1, bg = white1 } },
@@ -1129,7 +1136,7 @@ local highlight_groups = {
 	GalaxyFg = { dark = { fg = gray7, bg = gray3 }, light = { fg = black0, bg = white0 } },
 	GalaxyFgAlt = { dark = { fg = gray7, bg = red0 }, light = { fg = gray9, bg = red1 } },
 	GalaxyFgAlt2 = { dark = { fg = gray7, bg = gray3 }, light = { fg = gray6, bg = white0 } },
-	GalaxyYellow = { fg = yellow0, dark = { bg = gray3 }, light = { bg = white0 } },
+	GalaxyYellow = { fg = orange0, dark = { bg = gray3 }, light = { bg = white0 } },
 	GalaxyCyan = { fg = turquoise0, dark = { bg = gray3 }, light = { bg = white0 } },
 	GalaxyGreen = { fg = green1, dark = { bg = gray3 }, light = { bg = white0 } },
 	GalaxyOrange = { fg = orange0, dark = { bg = gray3 }, light = { bg = white0 } },
@@ -1300,21 +1307,21 @@ local highlight_groups = {
 	WhichKeyFloat = "Pmenu",
 
 	-- [[ 4.5 Others ]]
-	FocusedSymbol = { fg = black0, bg = yellow0 },
+	FocusedSymbol = { fg = black0, bg = orange0 },
 	OutlinePreviewBG = { dark = { bg = gray3 }, light = { bg = white1 } },
-	NvimDapVirtualTextChanged = { fg = purple1 },
+	NvimDapVirtualTextChanged = { fg = pink1 },
 	MarkSignHL = { fg = red0 },
 	MarkSignNumHL = { fg = turquoise0 },
 	SymbolsOutlineConnector = "IndentBlanklineChar",
 	LocalHighlight = { style = { "undercurl" } },
 	LspSignatureActiveParameter = "Search",
 	LspLens = "Folded",
-	CodeBlock = { light = {bg = white0}},
+	CodeBlock = { light = { bg = white0 } },
 	Headline = { light = { bg = gray9 } },
 	Headline1 = { light = { bg = gray9 } },
 	Headline2 = { light = { bg = turquoise0 } },
 	Headline3 = { light = { bg = pink0 } },
-	MiniCursorword = {light = {bg = changebg_light}},
+	MiniCursorword = { light = { bg = changebg_light } },
 }
 
 local terminal_colors = {
@@ -1329,9 +1336,9 @@ local terminal_colors = {
 	[9] = gray1,
 	[10] = red0,
 	[11] = green1,
-	[12] = yellow0,
+	[12] = orange0,
 	[13] = turquoise1,
-	[14] = purple1,
+	[14] = pink1,
 	[15] = blue1,
 	[16] = gray6,
 }
