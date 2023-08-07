@@ -1296,6 +1296,9 @@ local highlight_groups = {
 	FlashBackdrop = { dark = { fg = gray0 }, light = { fg = gray6 } },
 	FlashLabel = "DiffChange",
 
+	-- [[ 4.4.31 Which-key]]
+	WhichKeyFloat = "Pmenu",
+
 	-- [[ 4.5 Others ]]
 	FocusedSymbol = { fg = black0, bg = yellow0 },
 	OutlinePreviewBG = { dark = { bg = gray3 }, light = { bg = white1 } },
