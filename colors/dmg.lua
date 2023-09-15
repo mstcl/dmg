@@ -147,8 +147,8 @@ local highlight_groups = {
 	PmenuSel = { bg = tabline_group.bg, style = { "bold" } },
 	PmenuThumb = { fg = comment_group.fg, bg = comment_group.fg },
 	WildMenu = "PmenuSel",
-	NormalFloat = highlight_group_normal,
-	FloatBorder = { fg = gray7, bg = highlight_group_normal.bg },
+	NormalFloat = pmenu_group,
+	FloatBorder = { fg = pmenu_group.bg, bg = pmenu_group.bg },
 
 	--[[ 4.2.5. Folds]]
 	FoldColumn = { fg = gray7, style = "bold" },
