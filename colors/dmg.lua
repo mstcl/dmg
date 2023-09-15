@@ -106,11 +106,11 @@ local highlight_groups = {
 	--[[ 4.1.8. Help Syntax]]
 	Underlined = { fg = turquoise1, style = { "underline", color = turquoise1 } },
 	Ignore = "Identifier",
-	Error = "DiffDelete",
+	Error = { fg = orange1, bg = orange_bg },
 	Todo = "DiffDelete",
-	Hint = "DiffChange",
-	Info = "DiffChange",
-	Warning = "DiffChange",
+	Hint = { fg = red1, bg = red_bg },
+	Info = { fg = blue1, bg = blue_bg },
+	Warning = { fg = turquoise1, bg = turquoise_bg },
 
 	--[[ 4.2... Editor UI  ]]
 
@@ -171,10 +171,10 @@ local highlight_groups = {
 	SignColumn = { bg = highlight_group_normal.bg },
 
 	--[[ 4.2.10. Messages]]
-	ErrorMsg = { fg = red1 },
-	HintMsg = { fg = magenta1 },
-	InfoMsg = "Keyword",
-	WarningMsg = { fg = orange1 },
+	ErrorMsg = { fg = orange1 },
+	HintMsg = { fg = red1 },
+	InfoMsg = { fg = blue1 },
+	WarningMsg = { fg = turquoise1 },
 	ModeMsg = "WarningMsg",
 	MoreMsg = { fg = gray8 },
 	Question = { fg = turquoise1 },
