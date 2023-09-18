@@ -1025,6 +1025,9 @@ local highlight_groups = {
 	-- [[ 4.4.35 MarkSign ]]
 	MarkSignHL = "Conceal",
 	MarkSignNumHL = { fg = turquoise0 },
+
+	-- [[ 4.5 Others ]]
+	BiscuitColor = "NonText"
 }
 
 local terminal_colors = {
