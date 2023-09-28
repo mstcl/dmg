@@ -156,7 +156,7 @@ local highlight_groups = {
 
 	--[[ 4.2.7. Searching]]
 	IncSearch = { style = { "inverse" } },
-	MatchParen = "MatchParen",
+	MatchParen = "IncSearch",
 	Search = { style = { "inverse", color = NONE } },
 	CurSearch = { light = { bg = changebg_light } },
 
@@ -1012,10 +1012,10 @@ local highlight_groups = {
 
 	--[[ 4.4.33 headlines.nvim ]]
 	CodeBlock = "WinBar",
-	Headline = { bg = pmenu_group.bg },
+	Headline = { bg = statusline_group.bg },
 	Headline1 = "Headline",
-	Headline2 = { bg = changebg_light },
-	Headline3 = "Headline2",
+	Headline2 = "Headline",
+	Headline3 = "Headline",
 
 	--[[ 4.4.34 SymbolsOutline ]]
 	FocusedSymbol = { fg = highlight_group_normal.fg, bg = orange0 },
