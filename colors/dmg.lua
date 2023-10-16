@@ -730,12 +730,13 @@ local highlight_groups = {
 	["@conditional"] = "Conditional",
 	["@constant.builtin"] = "Conditional",
 	["@constructor"] = "Typedef",
-	["@text.reference"] = "Special",
 	["@function.builtin"] = { fg = turquoise1, style = "bold" },
 	["@tag"] = "Tag",
 	["@function"] = "Function",
 	["@field"] = { fg = gray1 },
 	["@exception"] = { fg = pink0, style = "italic" },
+	["@text.reference"] = { fg = pink1 },
+	["@text.strike"] = "markdownStrike",
 	["@function.macro"] = "ErrorMsg",
 	["@string.escape"] = "Character",
 	["@string.regex"] = "SpecialChar",
@@ -744,7 +745,7 @@ local highlight_groups = {
 	["@property"] = "Question",
 	["@punctuation.delimiter"] = "Identifier",
 	["@punctuation.bracket"] = "Conceal",
-	["@punctuation.special"] = { fg = gray0, style = "bold" },
+	["@punctuation.special"] = { fg = gray5, style = "bold" },
 	["@repeat"] = "Repeat",
 	["@keyword"] = "Define",
 	["@keyword.function"] = "Repeat",
@@ -759,8 +760,26 @@ local highlight_groups = {
 	["@type.definition"] = "Define",
 	["@text.title"] = { fg = red0, style = { "bold", "underline", color = red0 } },
 	["@text.literal"] = "String",
-	["@text.emphasis"] = { style = "italic" },
-	["@text.strong"] = { style = "bold" },
+	["@text.title.1"] = "markdownH1",
+	OrgTSHeadlineLevel1 = "markdownH1",
+	["@text.title.1.marker"] = "Delimiter",
+	["@text.title.2"] = "markdownH2",
+	OrgTSHeadlineLevel2 = "markdownH2",
+	["@text.title.2.marker"] = "Delimiter",
+	["@text.title.3"] = "markdownH3",
+	OrgTSHeadlineLevel3 = "markdownH3",
+	["@text.title.3.marker"] = "Delimiter",
+	["@text.title.4"] = "markdownH4",
+	OrgTSHeadlineLevel4 = "markdownH4",
+	["@text.title.4.marker"] = "Delimiter",
+	["@text.title.5"] = "markdownH5",
+	OrgTSHeadlineLevel5 = "markdownH5",
+	["@text.title.5.marker"] = "Delimiter",
+	["@text.title.6"] = "markdownH6",
+	OrgTSHeadlineLevel6 = "markdownH6",
+	["@text.title.6.marker"] = "Delimiter",
+	["@text.emphasis"] = { fg = gray0, style = "italic" },
+	["@text.strong"] = { fg = gray0, style = "bold" },
 
 	--[[ 4.4.9. barbar.nvim ]]
 	BufferCurrent = { fg = gray0, bg = statusline_group.bg, style = "bold" },
@@ -1011,11 +1030,11 @@ local highlight_groups = {
 	MiniCursorword = "CurSearch",
 
 	--[[ 4.4.33 headlines.nvim ]]
-	CodeBlock = "WinBar",
-	Headline = { bg = statusline_group.bg },
-	Headline1 = "Headline",
-	Headline2 = "Headline",
-	Headline3 = "Headline",
+	-- CodeBlock = "WinBar",
+	-- Headline = { bg = statusline_group.bg },
+	-- Headline1 = "Headline",
+	-- Headline2 = "Headline",
+	-- Headline3 = "Headline",
 
 	--[[ 4.4.34 SymbolsOutline ]]
 	FocusedSymbol = { fg = highlight_group_normal.fg, bg = orange0 },
@@ -1027,7 +1046,7 @@ local highlight_groups = {
 	MarkSignNumHL = { fg = turquoise0 },
 
 	-- [[ 4.5 Others ]]
-	BiscuitColor = "NonText"
+	BiscuitColor = "NonText",
 }
 
 local terminal_colors = {
