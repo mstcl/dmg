@@ -32,11 +32,10 @@ local pink0 = { "#8e3d63", 38, "white" }
 local red_bg = { "#dbc4c8", 196, "red" }
 local orange_bg = { "#dcb892", 208, "darkyellow" }
 local yellow_bg = { "#d6c890", 38, "cyan" }
-local green_bg = { "#d0d8cc", 72, "green"}
+local green_bg = { "#d0d8cc", 72, "green" }
 local blue_bg = { "#d1ccde", 87, "blur" }
 local purple_bg = { "#d1bed0", 126, "magenta" }
 local pink_bg = { "#deb9b9", 38, "white" }
-
 
 local addfg = { "#637337", 51, "cyan" }
 local addbg_light = { "#dae5cd", 51, "cyan" }
@@ -130,7 +129,7 @@ local highlight_groups = {
 	WinBar = { bg = statusline_group.bg },
 
 	--[[ 4.2.2. Separators]]
-	VertSplit = { bg = highlight_group_normal.bg, fg = highlight_group_normal.bg },
+	VertSplit = { bg = statusline_group.bg, fg = statusline_group.bg },
 	TabLine = tabline_group,
 	TabLineFill = "VertSplit",
 	TabLineSel = highlight_group_normal,
@@ -993,6 +992,7 @@ local highlight_groups = {
 	NoiceCmdlineIcon = "TelescopePromptPrefix",
 	NoiceVirtualText = "NonText",
 	NoicePopup = "Pmenu",
+	NoiceCursor = { fg = blue_bg, bg = blue1 },
 
 	-- [[ 4.4.29 Notify]]
 	NotifyINFOIcon = { fg = green0, bg = pmenu_group.bg },
@@ -1026,7 +1026,7 @@ local highlight_groups = {
 
 	--[[ 4.4.32 Mini ]]
 	MiniStarterHeader = { fg = comment_group.fg },
-	MiniStarterCurrent = "ErrorMsg",
+	MiniStarterCurrent = { fg = red1 },
 	MiniStarterFooter = "MiniStarterHeader",
 	MiniStarterItem = "MiniStarterHeader",
 	MiniStarterInactive = "NonText",
@@ -1070,6 +1070,11 @@ local highlight_groups = {
 	AerialGuide = "NonText",
 	AerialLineNC = "CurSearch",
 	AerialLine = "CurSearch",
+
+	-- [[ 4.4.37 Neogit ]]
+	NeogitCursorLine = { bg = white0 },
+	NeogitSectionHeader = { fg = red1, bg = red_bg },
+	NeogitHunkHeader = { bg = purple_bg, fg = purple1 },
 
 	-- [[ 4.5 Others ]]
 	BiscuitColor = "NonText",
