@@ -137,12 +137,12 @@ local highlight_groups = {
 
 	--[[ 4.2.3. Conditional Line Highlighting]]
 	Conceal = { fg = red0 },
-	CursorLine = { bg = highlight_group_normal.bg },
-	CursorLineNr = { bg = NONE },
-	CursorlineFold = "CursorLineNr",
+	CursorLine = { bg = statusline_group.bg },
+	CursorLineNr = { bg = pmenu_group.bg },
+	CursorlineFold = "FoldColumn",
 	debugBreakpoint = "ErrorMsg",
 	debugPC = "ColorColumn",
-	LineNr = "Delimiter",
+	LineNr = "StatuslineNC",
 	QuickFixLine = { bg = gray7 },
 	Visual = { bg = pmenu_group.bg },
 	VisualNOS = "Visual",
@@ -157,14 +157,14 @@ local highlight_groups = {
 	FloatBorder = { fg = pmenu_group.bg, bg = pmenu_group.bg },
 
 	--[[ 4.2.5. Folds]]
-	FoldColumn = { fg = gray7, style = "bold" },
+	FoldColumn = { fg = gray7, bg = highlight_group_normal.bg, style = "bold" },
 	Folded = { bg = changebg_light },
 
 	--[[ 4.2.7. Searching]]
 	IncSearch = { style = { "inverse" } },
 	MatchParen = "IncSearch",
 	Search = { style = { "inverse", color = NONE } },
-	CurSearch = { light = { bg = changebg_light } },
+	CurSearch = { bg = blue_bg },
 
 	--[[ 4.2.8. Spelling]]
 	SpellBad = { style = { "undercurl", color = red0 } },
@@ -174,7 +174,7 @@ local highlight_groups = {
 
 	--[[ 4.2.9. Conditional Column Highlighting]]
 	ColorColumn = { bg = white0 },
-	SignColumn = { bg = highlight_group_normal.bg },
+	SignColumn = { bg = highlight_group_normal },
 
 	--[[ 4.2.10. Messages]]
 	ErrorMsg = { fg = orange1 },
@@ -189,19 +189,19 @@ local highlight_groups = {
 	DiagnosticDeprecated = { strikethrough = true },
 	DiagnosticError = "Error",
 	DiagnosticFloatingError = "ErrorMsg",
-	DiagnosticSignError = "DiagnosticFloatingError",
+	DiagnosticSignError = { fg = orange1, bg = orange_bg },
 	DiagnosticVirtualTextError = "DiagnosticError",
 	DiagnosticWarn = "Warning",
 	DiagnosticFloatingWarn = "WarningMsg",
-	DiagnosticSignWarn = "DiagnosticFloatingWarn",
+	DiagnosticSignWarn = { fg = yellow1, bg = yellow_bg },
 	DiagnosticVirtualTextWarn = "DiagnosticWarn",
 	DiagnosticHint = "Hint",
 	DiagnosticFloatingHint = "HintMsg",
-	DiagnosticSignHint = "DiagnosticFloatingHint",
+	DiagnosticSignHint = { fg = red1, bg = red_bg },
 	DiagnosticVirtualTextHint = "DiagnosticHint",
 	DiagnosticInfo = "Info",
 	DiagnosticFloatingInfo = "InfoMsg",
-	DiagnosticSignInfo = "DiagnosticFloatingInfo",
+	DiagnosticSignInfo = { fg = blue1, bg = red_bg },
 	DiagnosticVirtualTextInfo = "DiagnosticInfo",
 	DiagnosticOk = "DiffAdd",
 	DiagnosticFloatingOk = { fg = green1 },
@@ -802,12 +802,14 @@ local highlight_groups = {
 	BufferInactiveTarget = { bg = white0, fg = red1, style = { "underline", "inverse" } },
 
 	BufferAlternate = "BufferInactive",
+	BufferAlternateIndex = "BufferInactiveIndex",
 	BufferAlternateERROR = "BufferInactiveERROR",
 	BufferAlternateMod = "BufferInactiveMod",
 	BufferAlternateSign = "BufferInactiveSign",
 	BufferAlternateTarget = "BufferInactiveTarget",
 
 	BufferVisible = "BufferInactive",
+	BufferVisibleIndex = "BufferInactiveIndex",
 	BufferVisibleMod = "BufferInactiveMod",
 	BufferVisibleSign = "BufferInactiveSign",
 	BufferVisibleTarget = "BufferInactiveTarget",
@@ -909,19 +911,19 @@ local highlight_groups = {
 	GalaxyFgAlt2 = { fg = comment_group.fg, bg = statusline_group.bg },
 	GalaxyFgAlt2I = { bg = gray5, fg = statusline_group.bg },
 	GalaxyFgAlt3 = { fg = gray0, bg = gray8 },
-	GalaxyYellow = { fg = orange0, bg = statusline_group.bg },
-	GalaxyCyan = { fg = yellow0, bg = statusline_group.bg },
+	GalaxyYellow = { fg = yellow1, bg = statusline_group.bg },
+	GalaxyPink = { fg = pink1, bg = statusline_group.bg },
 	GalaxyGreen = { fg = green1, bg = statusline_group.bg },
-	GalaxyOrange = { fg = orange0, bg = statusline_group.bg },
+	GalaxyOrange = { fg = orange1, bg = statusline_group.bg },
 	GalaxyMagenta = { fg = purple1, bg = statusline_group.bg },
-	GalaxyBlue = { fg = blue0, bg = statusline_group.bg },
-	GalaxyRed = { fg = red0, bg = statusline_group.bg },
+	GalaxyBlue = { fg = blue1, bg = statusline_group.bg },
+	GalaxyRed = { fg = red1, bg = statusline_group.bg },
 
 	--[[ 4.4.25 DAP UI]]
-	DapBreakpoint = "Conceal",
-	DapBreakpointCondition = "ErrorMsg",
-	DapLogPoint = { fg = yellow1 },
-	DapStopped = { fg = green1 },
+	DapBreakpoint = { fg = purple1, bg = purple_bg },
+	DapBreakpointCondition = { fg = pink1, bg = pink_bg },
+	DapLogPoint = { fg = yellow1, bg = yellow_bg },
+	DapStopped = { fg = green1, bg = green_bg },
 	DapUIVariable = "Normal",
 	DapUIScope = { fg = blue0 },
 	DapUIType = "DapUIScope",
@@ -941,7 +943,7 @@ local highlight_groups = {
 	DapUIBreakpointsInfo = { fg = green0 },
 	DapUIBreakpointsCurrentLine = { { fg = green1 }, style = { "bold" } },
 	DapUIBreakpointsLine = "DapUILineNumber",
-	DapBreakpointRejected = { fg = orange0 },
+	DapBreakpointRejected = { fg = orange1, bg = orange_bg },
 	NvimDapVirtualTextChanged = "Keyword",
 
 	-- [[ 4.4.26 Barbecue]]
@@ -990,7 +992,9 @@ local highlight_groups = {
 
 	-- [[ 4.4.28 Noice]]
 	NoiceCmdlineIcon = "TelescopePromptPrefix",
-	NoiceVirtualText = "NonText",
+	NoiceCmdlineIconSearch = "TelescopePromptPrefix",
+	NoiceCmdlinePrompt = "TelescopePromptPrefix",
+	NoiceVirtualText = {fg = green1, bg = green_bg},
 	NoicePopup = "Pmenu",
 	NoiceCursor = { fg = blue_bg, bg = blue1 },
 
@@ -1019,7 +1023,7 @@ local highlight_groups = {
 
 	-- [[ 4.4.30 Flash]]
 	FlashBackdrop = { fg = comment_group.fg },
-	FlashLabel = "DiffChange",
+	FlashLabel = { fg = blue1, bg = blue_bg },
 
 	-- [[ 4.4.31 Which-key]]
 	WhichKeyFloat = "Pmenu",
@@ -1038,7 +1042,8 @@ local highlight_groups = {
 	MiniMapSymbolLine = "Comment",
 	MiniMapSymbolView = "MiniMapNormal",
 
-	MiniCursorword = "CurSearch",
+	MiniCursorwordCurrent = { bg = purple_bg },
+	MiniCursorword = "MiniCursorwordCurrent",
 
 	--[[ 4.4.33 headlines.nvim ]]
 	-- CodeBlock = "WinBar",
