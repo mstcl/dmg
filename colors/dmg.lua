@@ -994,6 +994,7 @@ local highlight_groups = {
 	NoiceCmdlineIcon = "TelescopePromptPrefix",
 	NoiceCmdlineIconSearch = "TelescopePromptPrefix",
 	NoiceCmdlinePrompt = "TelescopePromptPrefix",
+	NoiceCmdline = "Statusline",
 	NoiceVirtualText = {fg = green1, bg = green_bg},
 	NoicePopup = "Pmenu",
 	NoiceCursor = { fg = blue_bg, bg = blue1 },
