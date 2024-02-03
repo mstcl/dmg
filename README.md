@@ -10,7 +10,7 @@ Using lazy.nvim:
 
 ```lua
 {
-	"git.bim.boats/dmg",
+	"mstcl/dmg",
 	lazy = false,
 	priority = 1000,
 	config = function()
