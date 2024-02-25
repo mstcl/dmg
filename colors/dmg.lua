@@ -769,7 +769,7 @@ local highlight_groups = {
 	["@variable.builtin"] = "Repeat",
 	["@type.definition"] = "Define",
 	["@markup.heading"] = { fg = red0, style = { "bold", "underline", color = red0 } },
-	["@text.literal"] = "String",
+	["@markup.literal"] = "String",
 	["@markup.heading.1"] = "markdownH1",
 	OrgTSHeadlineLevel1 = "markdownH1",
 	["@markup.heading.1.marker"] = "Delimiter",
@@ -789,11 +789,11 @@ local highlight_groups = {
 	OrgTSHeadlineLevel6 = "markdownH6",
 	["@markup.heading.6.marker"] = "Delimiter",
 	["@markup.list"] = "mkdListItem",
-	["@text.emphasis"] = { style = "italic" },
+	["@markup.emphasis"] = { style = "italic" },
 	["@markup.raw"] = "mkdCode",
 	["@markup.raw.block"] = { bg = NONE },
 	["@markup.quote"] = { fg = gray0, style = "italic" },
-	["@text.strong"] = { style = "bold" },
+	["@markup.strong"] = { style = "bold" },
 
 	--[[ 4.4.9. barbar.nvim ]]
 	BufferCurrent = { fg = gray0, bg = statusline_group.bg },
@@ -1005,6 +1005,7 @@ local highlight_groups = {
 	NoiceCmdline = "Statusline",
 	NoiceVirtualText = { fg = green1, bg = green_bg },
 	NoicePopup = "Pmenu",
+	NoiceMini = "Pmenu",
 	NoiceCursor = { fg = blue_bg, bg = blue1 },
 
 	-- [[ 4.4.29 Notify]]
@@ -1089,6 +1090,12 @@ local highlight_groups = {
 	NeogitCursorLine = { bg = white0 },
 	NeogitSectionHeader = { fg = red1, bg = red_bg },
 	NeogitHunkHeader = { bg = purple_bg, fg = purple1 },
+
+	-- [[ 4.4.38 Modes ]]
+	ModesCopy = { bg = purple0 },
+	ModesInsert = { bg = orange0 },
+	ModesDelete = { bg = red0 },
+	ModesVisual = { bg = blue0 },
 
 	-- [[ 4.5 Others ]]
 	BiscuitColor = "NonText",
