@@ -129,7 +129,7 @@ local highlight_groups = {
 	WinBar = { bg = statusline_group.bg },
 
 	--[[ 4.2.2. Separators]]
-	VertSplit = { bg = statusline_group.bg, fg = statusline_group.bg },
+	VertSplit = { bg = highlight_group_normal.bg, fg = statusline_group.bg },
 	TabLine = tabline_group,
 	TabLineFill = "VertSplit",
 	TabLineSel = highlight_group_normal,
@@ -633,6 +633,11 @@ local highlight_groups = {
 	manSectionHeading = "markdownH2",
 	manSubHeading = "markdownH3",
 
+	-- [[ 4.3.39 Org]]
+	OrgBulletsDash = "mkdListItem",
+	OrgBulletsStar = "mkdListItem",
+	OrgBulletsPlus = "mkdListItem",
+
 	--[[ 4.4. Plugins ]]
 
 	--[[ 4.3.39 Rust ]]
@@ -771,22 +776,16 @@ local highlight_groups = {
 	["@markup.heading"] = { fg = red0, style = { "bold", "underline", color = red0 } },
 	["@markup.literal"] = "String",
 	["@markup.heading.1"] = "markdownH1",
-	OrgTSHeadlineLevel1 = "markdownH1",
 	["@markup.heading.1.marker"] = "Delimiter",
 	["@markup.heading.2"] = "markdownH2",
-	OrgTSHeadlineLevel2 = "markdownH2",
 	["@markup.heading.2.marker"] = "Delimiter",
 	["@markup.heading.3"] = "markdownH3",
-	OrgTSHeadlineLevel3 = "markdownH3",
 	["@markup.heading.3.marker"] = "Delimiter",
 	["@markup.heading.4"] = "markdownH4",
-	OrgTSHeadlineLevel4 = "markdownH4",
 	["@markup.heading.4.marker"] = "Delimiter",
 	["@markup.heading.5"] = "markdownH5",
-	OrgTSHeadlineLevel5 = "markdownH5",
 	["@markup.heading.5.marker"] = "Delimiter",
 	["@markup.heading.6"] = "markdownH6",
-	OrgTSHeadlineLevel6 = "markdownH6",
 	["@markup.heading.6.marker"] = "Delimiter",
 	["@markup.list"] = "mkdListItem",
 	["@markup.emphasis"] = { style = "italic" },
@@ -794,6 +793,18 @@ local highlight_groups = {
 	["@markup.raw.block"] = { bg = NONE },
 	["@markup.quote"] = { fg = gray0, style = "italic" },
 	["@markup.strong"] = { style = "bold" },
+	["@org.leading_stars"] = "mkdListItem",
+	["@org.agenda.scheduled"] = "Directory",
+	["@org.agenda.deadline"] = "Conceal",
+	["@org.keyword.todo"] = { bg = red_bg, fg = red1 },
+	["@org.keyword.done"] = { bg = green_bg, fg = green1 },
+	["@org.bullet"] = "mkdListItem",
+	["@org.headline.level1"] = { fg=black0 , style = "bold"},
+	["@org.headline.level2"] = { fg=blue1 , style = "bold"},
+	["@org.headline.level3"] = { fg=pink1 , style = "bold"},
+	["@org.headline.level4"] = { fg=green1 , style = "bold"},
+	["@org.headline.level5"] = { fg=orange1 , style = "bold"},
+	["@org.headline.level6"] = { fg=yellow1 , style = "bold"},
 
 	--[[ 4.4.9. barbar.nvim ]]
 	BufferCurrent = { fg = gray0, bg = statusline_group.bg },
@@ -1097,8 +1108,15 @@ local highlight_groups = {
 	ModesDelete = { bg = red0 },
 	ModesVisual = { bg = blue0 },
 
+	-- [[ 4.4.39 Arrow ]]
+	ArrowFileIndex = { fg = orange1 },
+	ArrowCurrentFile = { fg = gray1, style = "bold" },
+	ArrowAction = { fg = green1 },
+
 	-- [[ 4.5 Others ]]
 	BiscuitColor = "NonText",
+	InclineNormal = { bg = blue1, fg = white0, style = "bold" },
+	InclineNormalNC = { bg = statusline_group.bg, fg = gray5, style = "bold" },
 }
 
 local terminal_colors = {
