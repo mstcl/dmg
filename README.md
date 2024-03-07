@@ -1,6 +1,6 @@
 # dmg
 
-__A neovim colorscheme based on DMG-01__
+*A neovim colorscheme based on DMG-01*
 
 ![preview](pics/preview.png)
 
