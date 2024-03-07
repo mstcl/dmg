@@ -96,7 +96,7 @@ local theme = lush(function(injected_functions)
 		NoiceMini({ Pmenu }),                                                          -- NoiceMini      xxx links to Pmenu
 		NotifyBackground({ Pmenu }),                                                   -- NotifyBackground xxx links to Pmenu
 		WhichKeyFloat({ Pmenu }),                                                      -- WhichKeyFloat  xxx links to Pmenu
-		PmenuSel({ bg = "#bdb1a8", gui = "bold" }),                                    -- PmenuSel       xxx cterm=bold ctermbg=15 gui=bold guibg=#bdb1a8
+		PmenuSel({ fg = "#493f37", bg = "#bdb1a8", gui = "bold" }),                    -- PmenuSel       xxx cterm=bold ctermbg=15 gui=bold guifg=#161e29 guibg=#bdb1a8
 		WildMenu({ PmenuSel }),                                                        -- WildMenu       xxx links to PmenuSel
 		PmenuKindSel({ PmenuSel }),                                                    -- PmenuKindSel   xxx links to PmenuSel
 		PmenuExtraSel({ PmenuSel }),                                                   -- PmenuExtraSel  xxx links to PmenuSel
@@ -119,7 +119,6 @@ local theme = lush(function(injected_functions)
 		WinBar({ bg = "#ded8d3" }),                                                    -- WinBar         xxx ctermbg=15 guibg=#ded8d3
 		WinBarNC({ WinBar }),                                                          -- WinBarNC       xxx links to WinBar
 		barbecue_normal({ WinBar }),                                                   -- barbecue_normal xxx links to WinBar
-		TelescopePreviewNormal({ WinBar }),                                            -- TelescopePreviewNormal xxx links to WinBar
 		lCursor({ bg = "fg", fg = "bg" }),                                             -- lCursor        xxx guifg=bg guibg=fg
 		Normal({ bg = "#e9e5e2", fg = "#161e29" }),                                    -- Normal         xxx ctermfg=0 ctermbg=15 guifg=#161e29 guibg=#e9e5e2
 		NvimSpacing({ Normal }),                                                       -- NvimSpacing    xxx links to Normal
@@ -580,12 +579,10 @@ local theme = lush(function(injected_functions)
 		DiagnosticFloatingHint({ HintMsg }),                                           -- DiagnosticFloatingHint xxx links to HintMsg
 		GalaxyFg({ bg = "#ded8d3", fg = "#161e29" }),                                  -- GalaxyFg       xxx ctermfg=0 ctermbg=15 guifg=#161e29 guibg=#ded8d3
 		GalaxyViMode({ bg = "#c8beb7", fg = "#9e8d7f" }),                              -- GalaxyViMode   xxx ctermfg=15 ctermbg=15 guifg=#9e8d7f guibg=#c8beb7
+		TelescopePreviewNormal({ WinBar }),                                            -- TelescopePreviewNormal xxx links to WinBar
 		TelescopeResultsTitle({ bg = "#184e1e", gui = "bold", fg = "#c8beb7" }),       -- TelescopeResultsTitle xxx cterm=bold ctermfg=15 ctermbg=83 gui=bold guifg=#c8beb7 guibg=#184e1e
 		TelescopePromptTitle({ bg = "#630e49", gui = "bold", fg = "#c8beb7" }),        -- TelescopePromptTitle xxx cterm=bold ctermfg=15 ctermbg=124 gui=bold guifg=#c8beb7 guibg=#630e49
 		TelescopePromptPrefix({ gui = "bold", fg = "#752c5f" }),                       -- TelescopePromptPrefix xxx cterm=bold ctermfg=196 gui=bold guifg=#752c5f
-		NoiceCmdlineIcon({ TelescopePromptPrefix }),                                   -- NoiceCmdlineIcon xxx links to TelescopePromptPrefix
-		NoiceCmdlineIconSearch({ TelescopePromptPrefix }),                             -- NoiceCmdlineIconSearch xxx links to TelescopePromptPrefix
-		NoiceCmdlinePrompt({ TelescopePromptPrefix }),                                 -- NoiceCmdlinePrompt xxx links to TelescopePromptPrefix
 		TelescopeResultsDiffUntracked({ TelescopePromptPrefix }),                      -- TelescopeResultsDiffUntracked xxx links to TelescopePromptPrefix
 		TelescopeMatching({ gui = "bold" }),                                           -- TelescopeMatching xxx cterm=bold gui=bold
 		TelescopePreviewBorder({ bg = "#ded8d3", fg = "#ded8d3" }),                    -- TelescopePreviewBorder xxx ctermfg=15 ctermbg=15 guifg=#ded8d3 guibg=#ded8d3

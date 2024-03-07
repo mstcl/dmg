@@ -617,7 +617,7 @@ highlight! link PmenuKind Pmenu
 highlight! link WhichKeyFloat Pmenu
 highlight PmenuSbar guifg=#bdb1a8 guibg=#c8beb7 guisp=NONE blend=NONE gui=NONE
 highlight! link UfoPreviewSbar PmenuSbar
-highlight PmenuSel guifg=NONE guibg=#bdb1a8 guisp=NONE blend=NONE gui=bold
+highlight PmenuSel guifg=#493f37 guibg=#bdb1a8 guisp=NONE blend=NONE gui=bold
 highlight! link PmenuExtraSel PmenuSel
 highlight! link PmenuKindSel PmenuSel
 highlight! link WildMenu PmenuSel
@@ -766,9 +766,6 @@ highlight TelescopePromptBorder guifg=#bdb1a8 guibg=#bdb1a8 guisp=NONE blend=NON
 highlight TelescopePromptCounter guifg=#574b42 guibg=#bdb1a8 guisp=NONE blend=NONE gui=NONE
 highlight TelescopePromptNormal guifg=NONE guibg=#bdb1a8 guisp=NONE blend=NONE gui=NONE
 highlight TelescopePromptPrefix guifg=#752c5f guibg=NONE guisp=NONE blend=NONE gui=bold
-highlight! link NoiceCmdlineIcon TelescopePromptPrefix
-highlight! link NoiceCmdlineIconSearch TelescopePromptPrefix
-highlight! link NoiceCmdlinePrompt TelescopePromptPrefix
 highlight! link TelescopeResultsDiffUntracked TelescopePromptPrefix
 highlight TelescopePromptTitle guifg=#c8beb7 guibg=#630e49 guisp=NONE blend=NONE gui=bold
 highlight TelescopeQueryFilter guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
@@ -930,4 +927,20 @@ highlight @parameter guifg=#813b21 guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight @punctuation.special guifg=#746458 guibg=NONE guisp=NONE blend=NONE gui=bold
 highlight @text.reference guifg=#793454 guibg=NONE guisp=NONE blend=NONE gui=NONE
 set background=light
-let g:colors_name="dmg"
+let g:colors_name='dmg'
+let g:terminal_color_0='#c8beb7'
+let g:terminal_color_1='#630e49'
+let g:terminal_color_2='#74351e'
+let g:terminal_color_3='#184e1e'
+let g:terminal_color_4='#26126d'
+let g:terminal_color_5='#793454'
+let g:terminal_color_6='#5e2b66'
+let g:terminal_color_7='#161e29'
+let g:terminal_color_8='#bdb1a8'
+let g:terminal_color_9='#752c5f'
+let g:terminal_color_10='#813b21'
+let g:terminal_color_11='#24752d'
+let g:terminal_color_12='#483d8b'
+let g:terminal_color_13='#72347c'
+let g:terminal_color_14='#8e3d63'
+let g:terminal_color_15='#2c2621'
