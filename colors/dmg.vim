@@ -301,20 +301,6 @@ highlight! link @lsp.type.decorator Function
 highlight! link @lsp.type.function Function
 highlight! link @lsp.type.method Function
 highlight! link @method Function
-highlight GalaxyBg guifg=#e9e5e2 guibg=#e9e5e2 guisp=NONE blend=NONE gui=NONE
-highlight GalaxyBlue guifg=#26126d guibg=#ded8d3 guisp=NONE blend=NONE gui=NONE
-highlight GalaxyFg guifg=#161e29 guibg=#ded8d3 guisp=NONE blend=NONE gui=NONE
-highlight GalaxyFgAlt guifg=#c8beb7 guibg=#630e49 guisp=NONE blend=NONE gui=NONE
-highlight GalaxyFgAlt2 guifg=#837163 guibg=#ded8d3 guisp=NONE blend=NONE gui=NONE
-highlight GalaxyFgAlt2I guifg=#ded8d3 guibg=#746458 guisp=NONE blend=NONE gui=NONE
-highlight GalaxyFgAlt3 guifg=#574b42 guibg=#bdb1a8 guisp=NONE blend=NONE gui=NONE
-highlight GalaxyGreen guifg=#184e1e guibg=#ded8d3 guisp=NONE blend=NONE gui=NONE
-highlight GalaxyMagenta guifg=#5e2b66 guibg=#ded8d3 guisp=NONE blend=NONE gui=NONE
-highlight GalaxyOrange guifg=#74351e guibg=#ded8d3 guisp=NONE blend=NONE gui=NONE
-highlight GalaxyPink guifg=#793454 guibg=#ded8d3 guisp=NONE blend=NONE gui=NONE
-highlight GalaxyRed guifg=#630e49 guibg=#ded8d3 guisp=NONE blend=NONE gui=NONE
-highlight GalaxyViMode guifg=#9e8d7f guibg=#c8beb7 guisp=NONE blend=NONE gui=NONE
-highlight GalaxyYellow guifg=#573e1a guibg=#ded8d3 guisp=NONE blend=NONE gui=NONE
 highlight GlanceBorderTop guifg=#c8beb7 guibg=#d0ccc9 guisp=NONE blend=NONE gui=NONE
 highlight GlanceFoldIcon guifg=#000000 guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight GlanceIndent guifg=#4a3f36 guibg=NONE guisp=NONE blend=NONE gui=NONE
@@ -700,6 +686,15 @@ highlight! link StatusLineTerm StatusLine
 highlight StatusLineNC guifg=#574b42 guibg=#ded8d3 guisp=NONE blend=NONE gui=NONE
 highlight! link LineNr StatusLineNC
 highlight! link StatusLineTermNC StatusLineNC
+highlight Statusline guifg=#161e29 guibg=#ded8d3 guisp=NONE blend=NONE gui=NONE
+highlight StatuslineAlt guifg=#837163 guibg=#ded8d3 guisp=NONE blend=NONE gui=NONE
+highlight StatuslineBlue guifg=#26126d guibg=#ded8d3 guisp=NONE blend=NONE gui=NONE
+highlight StatuslineGreen guifg=#184e1e guibg=#ded8d3 guisp=NONE blend=NONE gui=NONE
+highlight StatuslineMagenta guifg=#5e2b66 guibg=#ded8d3 guisp=NONE blend=NONE gui=NONE
+highlight StatuslineOrange guifg=#74351e guibg=#ded8d3 guisp=NONE blend=NONE gui=NONE
+highlight StatuslinePink guifg=#793454 guibg=#ded8d3 guisp=NONE blend=NONE gui=NONE
+highlight StatuslineRed guifg=#630e49 guibg=#ded8d3 guisp=NONE blend=NONE gui=NONE
+highlight StatuslineYellow guifg=#573e1a guibg=#ded8d3 guisp=NONE blend=NONE gui=NONE
 highlight StorageClass guifg=#74351e guibg=NONE guisp=NONE blend=NONE gui=bold
 highlight! link Structure StorageClass
 highlight! link crontabDay StorageClass
