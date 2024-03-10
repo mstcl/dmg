@@ -577,8 +577,6 @@ local theme = lush(function(injected_functions)
 		DiagnosticHint({ Hint }),                                                      -- DiagnosticHint xxx links to Hint
 		HintMsg({ fg = "#630e49" }),                                                   -- HintMsg        xxx ctermfg=124 guifg=#630e49
 		DiagnosticFloatingHint({ HintMsg }),                                           -- DiagnosticFloatingHint xxx links to HintMsg
-		GalaxyFg({ bg = "#ded8d3", fg = "#161e29" }),                                  -- GalaxyFg       xxx ctermfg=0 ctermbg=15 guifg=#161e29 guibg=#ded8d3
-		GalaxyViMode({ bg = "#c8beb7", fg = "#9e8d7f" }),                              -- GalaxyViMode   xxx ctermfg=15 ctermbg=15 guifg=#9e8d7f guibg=#c8beb7
 		TelescopePreviewNormal({ WinBar }),                                            -- TelescopePreviewNormal xxx links to WinBar
 		TelescopeResultsTitle({ bg = "#184e1e", gui = "bold", fg = "#c8beb7" }),       -- TelescopeResultsTitle xxx cterm=bold ctermfg=15 ctermbg=83 gui=bold guifg=#c8beb7 guibg=#184e1e
 		TelescopePromptTitle({ bg = "#630e49", gui = "bold", fg = "#c8beb7" }),        -- TelescopePromptTitle xxx cterm=bold ctermfg=15 ctermbg=124 gui=bold guifg=#c8beb7 guibg=#630e49
@@ -737,18 +735,15 @@ local theme = lush(function(injected_functions)
 		DapStopped({ bg = "#d0d8cc", fg = "#184e1e" }),                                -- DapStopped     xxx ctermfg=83 ctermbg=72 guifg=#184e1e guibg=#d0d8cc
 		DapBreakpointCondition({ bg = "#deb9b9", fg = "#793454" }),                    -- DapBreakpointCondition xxx ctermfg=162 ctermbg=38 guifg=#793454 guibg=#deb9b9
 		DapBreakpoint({ bg = "#d1bed0", fg = "#5e2b66" }),                             -- DapBreakpoint  xxx ctermfg=126 ctermbg=126 guifg=#5e2b66 guibg=#d1bed0
-		GalaxyRed({ bg = "#ded8d3", fg = "#630e49" }),                                 -- GalaxyRed      xxx ctermfg=124 ctermbg=15 guifg=#630e49 guibg=#ded8d3
-		GalaxyBlue({ bg = "#ded8d3", fg = "#26126d" }),                                -- GalaxyBlue     xxx ctermfg=63 ctermbg=15 guifg=#26126d guibg=#ded8d3
-		GalaxyMagenta({ bg = "#ded8d3", fg = "#5e2b66" }),                             -- GalaxyMagenta  xxx ctermfg=126 ctermbg=15 guifg=#5e2b66 guibg=#ded8d3
-		GalaxyOrange({ bg = "#ded8d3", fg = "#74351e" }),                              -- GalaxyOrange   xxx ctermfg=208 ctermbg=15 guifg=#74351e guibg=#ded8d3
-		GalaxyGreen({ bg = "#ded8d3", fg = "#184e1e" }),                               -- GalaxyGreen    xxx ctermfg=83 ctermbg=15 guifg=#184e1e guibg=#ded8d3
-		GalaxyPink({ bg = "#ded8d3", fg = "#793454" }),                                -- GalaxyPink     xxx ctermfg=162 ctermbg=15 guifg=#793454 guibg=#ded8d3
-		GalaxyYellow({ bg = "#ded8d3", fg = "#573e1a" }),                              -- GalaxyYellow   xxx ctermfg=33 ctermbg=15 guifg=#573e1a guibg=#ded8d3
-		GalaxyFgAlt3({ bg = "#bdb1a8", fg = "#574b42" }),                              -- GalaxyFgAlt3   xxx ctermfg=244 ctermbg=15 guifg=#574b42 guibg=#bdb1a8
-		GalaxyFgAlt2I({ bg = "#746458", fg = "#ded8d3" }),                             -- GalaxyFgAlt2I  xxx ctermfg=15 ctermbg=243 guifg=#ded8d3 guibg=#746458
-		GalaxyFgAlt2({ bg = "#ded8d3", fg = "#837163" }),                              -- GalaxyFgAlt2   xxx ctermfg=251 ctermbg=15 guifg=#837163 guibg=#ded8d3
-		GalaxyFgAlt({ bg = "#630e49", fg = "#c8beb7" }),                               -- GalaxyFgAlt    xxx ctermfg=15 ctermbg=124 guifg=#c8beb7 guibg=#630e49
-		GalaxyBg({ bg = "#e9e5e2", fg = "#e9e5e2" }),                                  -- GalaxyBg       xxx ctermfg=15 ctermbg=15 guifg=#e9e5e2 guibg=#e9e5e2
+		StatuslineRed({ bg = "#ded8d3", fg = "#630e49" }),                             -- StatuslineRed      xxx ctermfg=124 ctermbg=15 guifg=#630e49 guibg=#ded8d3
+		StatuslineBlue({ bg = "#ded8d3", fg = "#26126d" }),                            -- StatuslineBlue     xxx ctermfg=63 ctermbg=15 guifg=#26126d guibg=#ded8d3
+		StatuslineMagenta({ bg = "#ded8d3", fg = "#5e2b66" }),                         -- StatuslineMagenta  xxx ctermfg=126 ctermbg=15 guifg=#5e2b66 guibg=#ded8d3
+		StatuslineOrange({ bg = "#ded8d3", fg = "#74351e" }),                          -- StatuslineOrange   xxx ctermfg=208 ctermbg=15 guifg=#74351e guibg=#ded8d3
+		StatuslineGreen({ bg = "#ded8d3", fg = "#184e1e" }),                           -- StatuslineGreen    xxx ctermfg=83 ctermbg=15 guifg=#184e1e guibg=#ded8d3
+		StatuslinePink({ bg = "#ded8d3", fg = "#793454" }),                            -- StatuslinePink     xxx ctermfg=162 ctermbg=15 guifg=#793454 guibg=#ded8d3
+		StatuslineYellow({ bg = "#ded8d3", fg = "#573e1a" }),                          -- StatuslineYellow   xxx ctermfg=33 ctermbg=15 guifg=#573e1a guibg=#ded8d3
+		Statusline({ bg = "#ded8d3", fg = "#161e29" }),                                -- Statusline       xxx ctermfg=0 ctermbg=15 guifg=#161e29 guibg=#ded8d3
+		StatuslineAlt({ bg = "#ded8d3", fg = "#837163" }),                             -- StatuslineAlt   xxx ctermfg=251 ctermbg=15 guifg=#837163 guibg=#ded8d3
 		TSRainbowViolet({ fg = "#8e3d63" }),                                           -- TSRainbowViolet xxx ctermfg=38 guifg=#8e3d63
 		TelescopeTitle({ bg = "#752c5f", gui = "bold", fg = "#c8beb7" }),              -- TelescopeTitle xxx cterm=bold ctermfg=15 ctermbg=196 gui=bold guifg=#c8beb7 guibg=#752c5f
 		TelescopePreviewTitle({ bg = "#483d8b", gui = "bold", fg = "#ded8d3" }),       -- TelescopePreviewTitle xxx cterm=bold ctermfg=15 ctermbg=87 gui=bold guifg=#ded8d3 guibg=#483d8b
