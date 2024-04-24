@@ -3,12 +3,10 @@ highlight! link DapUIFrameName Normal
 highlight! link DapUIValue Normal
 highlight! link DapUIVariable Normal
 highlight! link NvimSpacing Normal
-highlight! link TroubleText Normal
 highlight ArrowAction guifg=#184e1e guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight ArrowCurrentFile guifg=#493f37 guibg=NONE guisp=NONE blend=NONE gui=bold
 highlight ArrowFileIndex guifg=#74351e guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight Boolean guifg=#813b21 guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight! link AerialBooleanIcon Boolean
 highlight! link goBoolean Boolean
 highlight! link scssBoolean Boolean
 highlight! link @boolean Boolean
@@ -17,7 +15,6 @@ highlight! link BufferCurrentTarget BufferCurrent
 highlight BufferCurrentERROR guifg=#630e49 guibg=#ded8d3 guisp=NONE blend=NONE gui=NONE
 highlight BufferCurrentIndex guifg=#837163 guibg=#ded8d3 guisp=NONE blend=NONE gui=NONE
 highlight BufferCurrentMod guifg=#74351e guibg=#ded8d3 guisp=NONE blend=NONE gui=NONE
-highlight BufferCurrentSign guifg=#ded8d3 guibg=#ded8d3 guisp=NONE blend=NONE gui=NONE
 highlight BufferInactive guifg=#746458 guibg=#bdb1a8 guisp=NONE blend=NONE gui=NONE
 highlight! link BufferAlternate BufferInactive
 highlight! link BufferInactiveMod BufferInactive
@@ -110,8 +107,6 @@ highlight Comment guifg=#837163 guibg=NONE guisp=NONE blend=NONE gui=italic
 highlight! link MiniMapSymbolLine Comment
 highlight! link NvimDapSubtleFrame Comment
 highlight! link NvimDapVirtualText Comment
-highlight! link TroubleCode Comment
-highlight! link TroubleSource Comment
 highlight! link UfoFoldedEllipsis Comment
 highlight! link luaComment Comment
 highlight! link tomlComment Comment
@@ -120,7 +115,6 @@ highlight! link @lsp.type.comment Comment
 highlight! link @text.literal Comment
 highlight Conceal guifg=#752c5f guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight! link CmpItemAbbrMatch Conceal
-highlight! link MarkSignHL Conceal
 highlight! link @org.agenda.deadline Conceal
 highlight! link @punctuation.bracket Conceal
 highlight Conditional guifg=#74351e guibg=NONE guisp=NONE blend=NONE gui=italic
@@ -132,7 +126,6 @@ highlight! link luaCondElse Conditional
 highlight! link @conditional Conditional
 highlight! link @constant.builtin Conditional
 highlight Constant guifg=#26126d guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight! link AerialConstantIcon Constant
 highlight! link cConstant Constant
 highlight! link goPredefinedIdentifiers Constant
 highlight! link jsonNull Constant
@@ -143,13 +136,10 @@ highlight! link vimFgBgAttrib Constant
 highlight! link @constant Constant
 highlight! link @lsp.type.enumMember Constant
 highlight CurSearch guifg=NONE guibg=#d1ccde guisp=NONE blend=NONE gui=NONE
-highlight! link AerialLine CurSearch
-highlight! link AerialLineNC CurSearch
 highlight CursorColumn guifg=NONE guibg=#493f37 guisp=NONE blend=NONE gui=NONE
 highlight CursorLine guifg=NONE guibg=#ded8d3 guisp=NONE blend=NONE gui=NONE
 highlight! link UfoCursorFoldedLine CursorLine
 highlight CursorLineNr guifg=NONE guibg=#c8beb7 guisp=NONE blend=NONE gui=NONE
-highlight! link TroubleFoldIcon CursorLineNr
 highlight DapBreakpoint guifg=#5e2b66 guibg=#d1bed0 guisp=NONE blend=NONE gui=NONE
 highlight DapBreakpointCondition guifg=#793454 guibg=#deb9b9 guisp=NONE blend=NONE gui=NONE
 highlight DapBreakpointRejected guifg=#74351e guibg=#dcb892 guisp=NONE blend=NONE gui=NONE
@@ -228,16 +218,12 @@ highlight DiagnosticFloatingOk guifg=#184e1e guibg=NONE guisp=NONE blend=NONE gu
 highlight! link DiagnosticSignOk DiagnosticFloatingOk
 highlight DiagnosticSignError guifg=#74351e guibg=#dcb892 guisp=NONE blend=NONE gui=NONE
 highlight! link LspDiagnosticsSignError DiagnosticSignError
-highlight! link TroubleSignError DiagnosticSignError
 highlight DiagnosticSignHint guifg=#630e49 guibg=#dbc4c8 guisp=NONE blend=NONE gui=NONE
 highlight! link LspDiagnosticsSignHint DiagnosticSignHint
-highlight! link TroubleSignHint DiagnosticSignHint
 highlight DiagnosticSignInfo guifg=#26126d guibg=#dbc4c8 guisp=NONE blend=NONE gui=NONE
 highlight! link LspDiagnosticsSignInformation DiagnosticSignInfo
-highlight! link TroubleSignInformation DiagnosticSignInfo
 highlight DiagnosticSignWarn guifg=#573e1a guibg=#d6c890 guisp=NONE blend=NONE gui=NONE
 highlight! link LspDiagnosticsSignWarning DiagnosticSignWarn
-highlight! link TroubleSignWarning DiagnosticSignWarn
 highlight DiagnosticUnderlineOk guifg=NONE guibg=NONE guisp=#184e1e blend=NONE gui=undercurl
 highlight DiagnosticUnnecessary guifg=NONE guibg=NONE guisp=#574b42 blend=NONE gui=underdotted
 highlight DiffAdd guifg=#637337 guibg=#dae5cd guisp=NONE blend=NONE gui=NONE
@@ -249,8 +235,6 @@ highlight! link Todo DiffDelete
 highlight! link diffRemoved DiffDelete
 highlight DiffText guifg=#2c2621 guibg=#c8beb7 guisp=NONE blend=NONE gui=NONE
 highlight Directory guifg=#483d8b guibg=NONE guisp=NONE blend=NONE gui=bold
-highlight! link AerialNamespaceIcon Directory
-highlight! link TroubleFile Directory
 highlight! link gitcommitSelectedFile Directory
 highlight! link @namespace Directory
 highlight! link @org.agenda.scheduled Directory
@@ -283,8 +267,6 @@ highlight FoldColumn guifg=#9e8d7f guibg=#e9e5e2 guisp=NONE blend=NONE gui=bold
 highlight! link CursorLineFold FoldColumn
 highlight Folded guifg=NONE guibg=#e1d2d6 guisp=NONE blend=NONE gui=NONE
 highlight Function guifg=#26126d guibg=NONE guisp=NONE blend=NONE gui=bold
-highlight! link AerialFunctionIcon Function
-highlight! link AerialMethodIcon Function
 highlight! link goFunction Function
 highlight! link i3ConfigAction Function
 highlight! link jsFuncBlock Function
@@ -301,27 +283,6 @@ highlight! link @lsp.type.decorator Function
 highlight! link @lsp.type.function Function
 highlight! link @lsp.type.method Function
 highlight! link @method Function
-highlight GlanceBorderTop guifg=#c8beb7 guibg=#d0ccc9 guisp=NONE blend=NONE gui=NONE
-highlight GlanceFoldIcon guifg=#000000 guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight GlanceIndent guifg=#4a3f36 guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight GlanceListBorderBottom guifg=#c8beb7 guibg=#d5d1ce guisp=NONE blend=NONE gui=NONE
-highlight GlanceListCount guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight GlanceListCursorLine guifg=NONE guibg=#cac4bf guisp=NONE blend=NONE gui=NONE
-highlight GlanceListEndOfBuffer guifg=#d5d1ce guibg=#d5d1ce guisp=NONE blend=NONE gui=NONE
-highlight GlanceListFilename guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight GlanceListFilepath guifg=#000000 guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight GlanceListMatch guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight GlanceListNormal guifg=#161e29 guibg=#d5d1ce guisp=NONE blend=NONE gui=NONE
-highlight GlancePreviewBorderBottom guifg=#c8beb7 guibg=#dcd8d5 guisp=NONE blend=NONE gui=NONE
-highlight GlancePreviewCursorLine guifg=NONE guibg=#d1cbc6 guisp=NONE blend=NONE gui=NONE
-highlight GlancePreviewEndOfBuffer guifg=#dcd8d5 guibg=#dcd8d5 guisp=NONE blend=NONE gui=NONE
-highlight GlancePreviewLineNr guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight GlancePreviewMatch guifg=#e9e5e2 guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight GlancePreviewNormal guifg=NONE guibg=#dcd8d5 guisp=NONE blend=NONE gui=NONE
-highlight GlancePreviewSignColumn guifg=#dcd8d5 guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight GlanceWinBarFilename guifg=#161e29 guibg=#d0ccc9 guisp=NONE blend=NONE gui=NONE
-highlight GlanceWinBarFilepath guifg=#000000 guibg=#d0ccc9 guisp=NONE blend=NONE gui=NONE
-highlight GlanceWinBarTitle guifg=#161e29 guibg=#d0ccc9 guisp=NONE blend=NONE gui=NONE
 highlight HLIndent1 guifg=#c8beb7 guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight Hint guifg=#630e49 guibg=#dbc4c8 guisp=NONE blend=NONE gui=NONE
 highlight! link DiagnosticHint Hint
@@ -329,7 +290,6 @@ highlight HintMsg guifg=#630e49 guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight! link DiagnosticFloatingHint HintMsg
 highlight Hlargs guifg=#87591a guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight Identifier guifg=#574b42 guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight! link AerialVariableIcon Identifier
 highlight! link Ignore Identifier
 highlight! link NvimIdentifier Identifier
 highlight! link Operator Identifier
@@ -440,9 +400,6 @@ highlight Macro guifg=#483d8b guibg=NONE guisp=NONE blend=NONE gui=italic
 highlight! link gitrebaseSquash Macro
 highlight! link @lsp.type.macro Macro
 highlight! link @macro Macro
-highlight MarkSignNumHL guifg=#8a6229 guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight MiniCursorwordCurrent guifg=NONE guibg=#d1bed0 guisp=NONE blend=NONE gui=NONE
-highlight! link MiniCursorword MiniCursorwordCurrent
 highlight MiniMapNormal guifg=#c8beb7 guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight! link MiniMapSymbolView MiniMapNormal
 highlight MiniStarterCurrent guifg=#630e49 guibg=NONE guisp=NONE blend=NONE gui=NONE
@@ -476,103 +433,16 @@ highlight ModesVisualCursorLineSign guifg=NONE guibg=#d1ccd5 guisp=NONE blend=NO
 highlight ModesVisualModeMsg guifg=#483d8b guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight ModesVisualVisual guifg=NONE guibg=#d1ccd5 guisp=NONE blend=NONE gui=NONE
 highlight MoreMsg guifg=#bdb1a8 guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight MsgArea guifg=#3a322c guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight NeogitCursorLine guifg=NONE guibg=#ded8d3 guisp=NONE blend=NONE gui=NONE
 highlight NeogitHunkHeader guifg=#5e2b66 guibg=#d1bed0 guisp=NONE blend=NONE gui=NONE
 highlight NeogitSectionHeader guifg=#630e49 guibg=#dbc4c8 guisp=NONE blend=NONE gui=NONE
-highlight NoiceCmdlineIconCalculator guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight NoiceCmdlineIconCmdline guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight NoiceCmdlineIconFilter guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight NoiceCmdlineIconHelp guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight NoiceCmdlineIconInput guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight NoiceCmdlineIconLua guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight NoiceCmdlinePopup guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight NoiceCmdlinePopupBorder guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight NoiceCmdlinePopupBorderCalculator guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight NoiceCmdlinePopupBorderCmdline guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight NoiceCmdlinePopupBorderFilter guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight NoiceCmdlinePopupBorderHelp guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight NoiceCmdlinePopupBorderInput guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight NoiceCmdlinePopupBorderLua guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight NoiceCmdlinePopupBorderSearch guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight NoiceCmdlinePopupTitle guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight NoiceCompletionItemKindClass guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight NoiceCompletionItemKindColor guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight NoiceCompletionItemKindConstant guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight NoiceCompletionItemKindConstructor guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight NoiceCompletionItemKindDefault guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight NoiceCompletionItemKindEnum guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight NoiceCompletionItemKindEnumMember guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight NoiceCompletionItemKindField guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight NoiceCompletionItemKindFile guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight NoiceCompletionItemKindFolder guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight NoiceCompletionItemKindFunction guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight NoiceCompletionItemKindInterface guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight NoiceCompletionItemKindKeyword guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight NoiceCompletionItemKindMethod guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight NoiceCompletionItemKindModule guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight NoiceCompletionItemKindProperty guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight NoiceCompletionItemKindSnippet guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight NoiceCompletionItemKindStruct guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight NoiceCompletionItemKindText guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight NoiceCompletionItemKindUnit guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight NoiceCompletionItemKindValue guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight NoiceCompletionItemKindVariable guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight NoiceConfirm guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight NoiceConfirmBorder guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight NoiceCursor guifg=#d1ccde guibg=#26126d guisp=NONE blend=NONE gui=NONE
-highlight NoiceFormatConfirm guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight NoiceFormatConfirmDefault guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight NoiceFormatDate guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight NoiceFormatEvent guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight NoiceFormatKind guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight NoiceFormatLevelDebug guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight NoiceFormatLevelError guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight NoiceFormatLevelInfo guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight NoiceFormatLevelOff guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight NoiceFormatLevelTrace guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight NoiceFormatLevelWarn guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight NoiceFormatProgressDone guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=reverse
-highlight NoiceFormatProgressTodo guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight NoiceFormatTitle guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight NoiceHiddenCursor guifg=NONE guibg=NONE guisp=NONE blend=100 gui=nocombine
-highlight NoiceLspProgressClient guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight NoiceLspProgressSpinner guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight NoiceLspProgressTitle guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight NoicePopupBorder guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight NoicePopupmenu guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight NoicePopupmenuBorder guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight NoicePopupmenuMatch guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight NoicePopupmenuSelected guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight NoiceScrollbar guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight NoiceScrollbarThumb guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight NoiceSplit guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight NoiceSplitBorder guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight NoiceVirtualText guifg=#184e1e guibg=#d0d8cc guisp=NONE blend=NONE gui=NONE
 highlight NonText guifg=#c8beb7 guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight! link AerialGuide NonText
-highlight! link BiscuitColor NonText
 highlight! link EndOfBuffer NonText
 highlight! link MiniStarterInactive NonText
 highlight! link Whitespace NonText
 highlight! link markdownHeadingDelimiter NonText
 highlight! link mkdLineBreak NonText
 highlight NormalFloat guifg=#493f37 guibg=#c8beb7 guisp=NONE blend=NONE gui=NONE
-highlight NotifyERRORIcon guifg=#752c5f guibg=#c8beb7 guisp=NONE blend=NONE gui=NONE
-highlight NotifyINFOBody guifg=#161e29 guibg=#c8beb7 guisp=NONE blend=NONE gui=NONE
-highlight! link NotifyERRORBody NotifyINFOBody
-highlight! link NotifyTRACEBody NotifyINFOBody
-highlight! link NotifyWARNBody NotifyINFOBody
-highlight NotifyINFOBorder guifg=#c8beb7 guibg=#c8beb7 guisp=NONE blend=NONE gui=NONE
-highlight! link NotifyERRORBorder NotifyINFOBorder
-highlight! link NotifyTRACEBorder NotifyINFOBorder
-highlight! link NotifyWARNBorder NotifyINFOBorder
-highlight NotifyINFOIcon guifg=#24752d guibg=#c8beb7 guisp=NONE blend=NONE gui=NONE
-highlight! link NotifyINFOTitle NotifyINFOIcon
-highlight NotifyTRACEIcon guifg=#72347c guibg=#c8beb7 guisp=NONE blend=NONE gui=NONE
-highlight! link NotifyTRACETitle NotifyTRACEIcon
-highlight NotifyWARNIcon guifg=#813b21 guibg=#c8beb7 guisp=NONE blend=NONE gui=NONE
-highlight! link NotifyWARNTitle NotifyWARNIcon
 highlight NullLsInfoBorder guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight NullLsInfoHeader guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight NullLsInfoSources guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
@@ -595,9 +465,6 @@ highlight! link NvimFigureBrace NvimInternalError
 highlight! link NvimInvalidSingleQuotedUnknownEscape NvimInternalError
 highlight! link NvimSingleQuotedUnknownEscape NvimInternalError
 highlight Pmenu guifg=#493f37 guibg=#c8beb7 guisp=NONE blend=NONE gui=NONE
-highlight! link NoiceMini Pmenu
-highlight! link NoicePopup Pmenu
-highlight! link NotifyBackground Pmenu
 highlight! link PmenuExtra Pmenu
 highlight! link PmenuKind Pmenu
 highlight! link WhichKeyFloat Pmenu
@@ -621,13 +488,6 @@ highlight! link @preproc PreProc
 highlight Question guifg=#573e1a guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight! link @property Question
 highlight QuickFixLine guifg=NONE guibg=#9e8d7f guisp=NONE blend=NONE gui=NONE
-highlight RainbowDelimiterBlue guifg=#458588 guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight RainbowDelimiterCyan guifg=#a89984 guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight RainbowDelimiterGreen guifg=#689d6a guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight RainbowDelimiterOrange guifg=#d65d0e guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight RainbowDelimiterRed guifg=#cc241d guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight RainbowDelimiterViolet guifg=#b16286 guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight RainbowDelimiterYellow guifg=#d79921 guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight RedrawDebugClear guifg=NONE guibg=yellow guisp=NONE blend=NONE gui=NONE
 highlight RedrawDebugComposed guifg=NONE guibg=green guisp=NONE blend=NONE gui=NONE
 highlight RedrawDebugNormal guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=reverse
@@ -644,7 +504,6 @@ highlight! link @repeat Repeat
 highlight! link @variable.builtin Repeat
 highlight Search guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=reverse
 highlight! link Substitute Search
-highlight! link TroublePreview Search
 highlight SignColumn guifg=NONE guibg=#e9e5e2 guisp=NONE blend=NONE gui=NONE
 highlight Special guifg=#26126d guibg=NONE guisp=NONE blend=NONE gui=bold
 highlight! link DressingSelectIdx Special
@@ -680,8 +539,8 @@ highlight! link pythonStatement Statement
 highlight! link shSet Statement
 highlight! link sqlStatement Statement
 highlight StatusLine guifg=#184e1e guibg=#ded8d3 guisp=NONE blend=NONE gui=NONE
+highlight! link MsgArea StatusLine
 highlight! link MsgSeparator StatusLine
-highlight! link NoiceCmdline StatusLine
 highlight! link StatusLineTerm StatusLine
 highlight StatusLineNC guifg=#574b42 guibg=#ded8d3 guisp=NONE blend=NONE gui=NONE
 highlight! link LineNr StatusLineNC
@@ -701,7 +560,6 @@ highlight! link crontabDay StorageClass
 highlight! link csStorage StorageClass
 highlight! link @storageclass StorageClass
 highlight String guifg=#184e1e guibg=NONE guisp=NONE blend=NONE gui=italic
-highlight! link AerialStringIcon String
 highlight! link NvimString String
 highlight! link cppSTLnamespace String
 highlight! link crontabDow String
@@ -718,7 +576,6 @@ highlight! link @markup.literal String
 highlight! link @string String
 highlight TSPlaygroundFocus guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight TSPlaygroundLang guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
-highlight TSQueryLinterError guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight TSRainbowBlue guifg=#72347c guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight TSRainbowCyan guifg=#8a6229 guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight TSRainbowGreen guifg=#24752d guibg=NONE guisp=NONE blend=NONE gui=NONE
@@ -794,8 +651,6 @@ highlight! link gitcommitSummary Title
 highlight! link gitrebaseSummary Title
 highlight! link helpHeadline Title
 highlight! link @text.title Title
-highlight TroubleCount guifg=#74351e guibg=NONE guisp=NONE blend=NONE gui=undercurl
-highlight TroubleNormal guifg=#161e29 guibg=#ded8d3 guisp=NONE blend=NONE gui=NONE
 highlight UfoFoldedBg guifg=NONE guibg=#e1d2d6 guisp=NONE blend=NONE gui=NONE
 highlight! link UfoPreviewWinBar UfoFoldedBg
 highlight UfoFoldedFg guifg=#161e29 guibg=NONE guisp=NONE blend=NONE gui=NONE
@@ -827,38 +682,6 @@ highlight WhichKeyValue guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight WinBar guifg=NONE guibg=#ded8d3 guisp=NONE blend=NONE gui=NONE
 highlight! link TelescopePreviewNormal WinBar
 highlight! link WinBarNC WinBar
-highlight! link barbecue_normal WinBar
-highlight barbecue_context_constant guifg=#c8beb7 guibg=#ded8d3 guisp=NONE blend=NONE gui=NONE
-highlight! link barbecue_context_key barbecue_context_constant
-highlight barbecue_context_file guifg=#c8beb7 guibg=#ded8d3 guisp=NONE blend=NONE gui=NONE
-highlight! link barbecue_context_array barbecue_context_file
-highlight! link barbecue_context_boolean barbecue_context_file
-highlight! link barbecue_context_class barbecue_context_file
-highlight! link barbecue_context_null barbecue_context_file
-highlight! link barbecue_context_number barbecue_context_file
-highlight! link barbecue_context_object barbecue_context_file
-highlight! link barbecue_context_string barbecue_context_file
-highlight! link barbecue_context_variable barbecue_context_file
-highlight barbecue_context_method guifg=#c8beb7 guibg=#ded8d3 guisp=NONE blend=NONE gui=NONE
-highlight! link barbecue_context_constructor barbecue_context_method
-highlight! link barbecue_context_enum barbecue_context_method
-highlight! link barbecue_context_field barbecue_context_method
-highlight! link barbecue_context_function barbecue_context_method
-highlight! link barbecue_context_operator barbecue_context_method
-highlight! link barbecue_context_property barbecue_context_method
-highlight! link barbecue_context_type_parameter barbecue_context_method
-highlight barbecue_context_module guifg=#c8beb7 guibg=#ded8d3 guisp=NONE blend=NONE gui=NONE
-highlight! link barbecue_context_enum_member barbecue_context_module
-highlight! link barbecue_context_interface barbecue_context_module
-highlight! link barbecue_context_namespace barbecue_context_module
-highlight! link barbecue_context_package barbecue_context_module
-highlight barbecue_context_struct guifg=#c8beb7 guibg=#ded8d3 guisp=NONE blend=NONE gui=NONE
-highlight! link barbecue_context_event barbecue_context_struct
-highlight barbecue_dirname guifg=#746458 guibg=#ded8d3 guisp=NONE blend=NONE gui=NONE
-highlight! link barbecue_basename barbecue_dirname
-highlight! link barbecue_context barbecue_dirname
-highlight! link barbecue_ellipsis barbecue_dirname
-highlight! link barbecue_separator barbecue_dirname
 highlight htmlBold guifg=#161e29 guibg=NONE guisp=NONE blend=NONE gui=bold
 highlight! link htmlTitle htmlBold
 highlight htmlItalic guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=italic
