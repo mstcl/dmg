@@ -139,7 +139,7 @@ highlight CurSearch guifg=NONE guibg=#d1ccde guisp=NONE blend=NONE gui=NONE
 highlight CursorColumn guifg=NONE guibg=#493f37 guisp=NONE blend=NONE gui=NONE
 highlight CursorLine guifg=NONE guibg=#ded8d3 guisp=NONE blend=NONE gui=NONE
 highlight! link UfoCursorFoldedLine CursorLine
-highlight CursorLineNr guifg=NONE guibg=#c8beb7 guisp=NONE blend=NONE gui=NONE
+highlight CursorLineNr guifg=#493f37 guibg=#e9e9e2 guisp=NONE blend=NONE gui=NONE
 highlight DapBreakpoint guifg=#5e2b66 guibg=#d1bed0 guisp=NONE blend=NONE gui=NONE
 highlight DapBreakpointCondition guifg=#793454 guibg=#deb9b9 guisp=NONE blend=NONE gui=NONE
 highlight DapBreakpointRejected guifg=#74351e guibg=#dcb892 guisp=NONE blend=NONE gui=NONE
@@ -233,6 +233,10 @@ highlight DiffChange guifg=#705357 guibg=#e1d2d6 guisp=NONE blend=NONE gui=NONE
 highlight DiffDelete guifg=#834c40 guibg=#ecd5d3 guisp=NONE blend=NONE gui=NONE
 highlight! link Todo DiffDelete
 highlight! link diffRemoved DiffDelete
+highlight DiffFGAdd guifg=#637337 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight DiffFGChange guifg=#705357 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight DiffFGDelete guifg=#834c40 guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight DiffFGText guifg=#2c2621 guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight DiffText guifg=#2c2621 guibg=#c8beb7 guisp=NONE blend=NONE gui=NONE
 highlight Directory guifg=#483d8b guibg=NONE guisp=NONE blend=NONE gui=bold
 highlight! link gitcommitSelectedFile Directory
@@ -262,7 +266,6 @@ highlight FlashLabel guifg=#26126d guibg=#d1ccde guisp=NONE blend=NONE gui=NONE
 highlight FloatBorder guifg=#c8beb7 guibg=#c8beb7 guisp=NONE blend=NONE gui=NONE
 highlight FloatShadow guifg=NONE guibg=black guisp=NONE blend=80 gui=NONE
 highlight FloatShadowThrough guifg=NONE guibg=black guisp=NONE blend=100 gui=NONE
-highlight Floaterm guifg=#161e29 guibg=#c8beb7 guisp=NONE blend=NONE gui=NONE
 highlight FoldColumn guifg=#9e8d7f guibg=#e9e5e2 guisp=NONE blend=NONE gui=bold
 highlight! link CursorLineFold FoldColumn
 highlight Folded guifg=NONE guibg=#e1d2d6 guisp=NONE blend=NONE gui=NONE
@@ -390,6 +393,7 @@ highlight! link vimHiCterm Label
 highlight! link xdefaultsLabel Label
 highlight! link xxdAddress Label
 highlight! link yamlKey Label
+highlight LineNr guifg=#bdb1a8 guibg=#e9e5e2 guisp=NONE blend=NONE gui=NONE
 highlight LspInfoBorder guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight LspInfoFiletype guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight LspInfoList guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
@@ -543,7 +547,6 @@ highlight! link MsgArea StatusLine
 highlight! link MsgSeparator StatusLine
 highlight! link StatusLineTerm StatusLine
 highlight StatusLineNC guifg=#574b42 guibg=#ded8d3 guisp=NONE blend=NONE gui=NONE
-highlight! link LineNr StatusLineNC
 highlight! link StatusLineTermNC StatusLineNC
 highlight Statusline guifg=#161e29 guibg=#ded8d3 guisp=NONE blend=NONE gui=NONE
 highlight StatuslineAlt guifg=#837163 guibg=#ded8d3 guisp=NONE blend=NONE gui=NONE
@@ -642,7 +645,7 @@ highlight TelescopeResultsTitle guifg=#c8beb7 guibg=#184e1e guisp=NONE blend=NON
 highlight TelescopeResultsVariable guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight TelescopeSelection guifg=#161e29 guibg=#bdb1a8 guisp=NONE blend=NONE gui=bold
 highlight TelescopeSelectionCaret guifg=#161e29 guibg=#bdb1a8 guisp=NONE blend=NONE gui=NONE
-highlight TelescopeTitle guifg=#c8beb7 guibg=#752c5f guisp=NONE blend=NONE gui=bold
+highlight TelescopeTitle guifg=#ded8d3 guibg=#752c5f guisp=NONE blend=NONE gui=bold
 highlight TermCursor guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=reverse
 highlight Title guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=bold
 highlight! link FloatTitle Title
