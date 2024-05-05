@@ -34,8 +34,8 @@ local theme = lush(function(injected_functions)
 		ColorColumn({ bg = "#ded8d3" }),                       -- ColorColumn    xxx guibg=#ded8d3
 
 		TabLine({ bg = "#bdb1a8" }),                           -- TabLine        xxx ctermbg=15 guibg=#bdb1a8
-		TabLineSel({ bg = "#e9e5e2", fg = "#161e29" }),        -- TabLineSel     xxx ctermfg=0 ctermbg=15 guifg=#161e29 guibg=#e9e5e2
-		TabLineFill({ VertSplit }),                            -- TabLineFill    xxx links to VertSplit
+		TabLineSel({ TabLine }),        -- TabLineSel     xxx ctermfg=0 ctermbg=15 guifg=#161e29
+		TabLineFill({ TabLine }),                            -- TabLineFill    xxx links to VertSplit
 		QuickFixLine({ bg = "#9e8d7f" }),                      -- QuickFixLine   xxx ctermbg=15 guibg=#9e8d7f
 		WinBar({ bg = "#ded8d3" }),                            -- WinBar         xxx ctermbg=15 guibg=#ded8d3
 		WinBarNC({ WinBar }),                                  -- WinBarNC       xxx links to WinBar
@@ -655,8 +655,11 @@ local theme = lush(function(injected_functions)
 		BufferVisibleTarget({ BufferInactiveTarget }),                                -- BufferVisibleTarget xxx links to BufferInactiveTarget
 		BufferAlternateTarget({ BufferInactiveTarget }),                              -- BufferAlternateTarget xxx links to BufferInactiveTarget
 		BufferInactiveSign({ bg = "#bdb1a8", fg = "#bdb1a8" }),                       -- BufferInactiveSign xxx ctermfg=15 ctermbg=15 guifg=#bdb1a8 guibg=#bdb1a8
+		BufferInactiveSignRight({ BufferInactiveSign }),                                    -- BufferVisibleSign xxx links to BufferInactiveSign
 		BufferVisibleSign({ BufferInactiveSign }),                                    -- BufferVisibleSign xxx links to BufferInactiveSign
+		BufferVisibleSignRight({ BufferInactiveSign }),                                    -- BufferVisibleSign xxx links to BufferInactiveSign
 		BufferAlternateSign({ BufferInactiveSign }),                                  -- BufferAlternateSign xxx links to BufferInactiveSign
+		BufferAlternateSignRight({ BufferInactiveSign }),                                  -- BufferAlternateSign xxx links to BufferInactiveSign
 		BufferInactiveIndex({ bg = "#bdb1a8", fg = "#9e8d7f" }),                      -- BufferInactiveIndex xxx ctermfg=15 ctermbg=15 guifg=#9e8d7f guibg=#bdb1a8
 		BufferVisibleIndex({ BufferInactiveIndex }),                                  -- BufferVisibleIndex xxx links to BufferInactiveIndex
 		BufferAlternateIndex({ BufferInactiveIndex }),                                -- BufferAlternateIndex xxx links to BufferInactiveIndex
@@ -668,6 +671,8 @@ local theme = lush(function(injected_functions)
 		BufferCurrentMod({ bg = "#ded8d3", fg = "#74351e" }),                         -- BufferCurrentMod xxx ctermfg=208 ctermbg=15 guifg=#74351e guibg=#ded8d3
 		BufferCurrentIndex({ bg = "#ded8d3", fg = "#837163" }),                       -- BufferCurrentIndex xxx ctermfg=251 ctermbg=15 guifg=#837163 guibg=#ded8d3
 		BufferCurrent({ bg = "#ded8d3", fg = "#574b42" }),                            -- BufferCurrent  xxx ctermfg=244 ctermbg=15 guifg=#574b42 guibg=#ded8d3
+		BufferCurrentSign({ bg = "#ded8d3", fg = "#ded8d3" }),                            -- BufferCurrent  xxx ctermfg=244 ctermbg=15 guifg=#574b42 guibg=#ded8d3
+		BufferCurrentSignRight({ bg = "#ded8d3", fg = "#ded8d3" }),                            -- BufferCurrent  xxx ctermfg=244 ctermbg=15 guifg=#574b42 guibg=#ded8d3
 		BufferCurrentTarget({ BufferCurrent }),                                       -- BufferCurrentTarget xxx links to BufferCurrent
 
 		-- NVIM DAP

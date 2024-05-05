@@ -15,6 +15,8 @@ highlight! link BufferCurrentTarget BufferCurrent
 highlight BufferCurrentERROR guifg=#630e49 guibg=#ded8d3 guisp=NONE blend=NONE gui=NONE
 highlight BufferCurrentIndex guifg=#837163 guibg=#ded8d3 guisp=NONE blend=NONE gui=NONE
 highlight BufferCurrentMod guifg=#74351e guibg=#ded8d3 guisp=NONE blend=NONE gui=NONE
+highlight BufferCurrentSign guifg=#ded8d3 guibg=#ded8d3 guisp=NONE blend=NONE gui=NONE
+highlight BufferCurrentSignRight guifg=#ded8d3 guibg=#ded8d3 guisp=NONE blend=NONE gui=NONE
 highlight BufferInactive guifg=#746458 guibg=#bdb1a8 guisp=NONE blend=NONE gui=NONE
 highlight! link BufferAlternate BufferInactive
 highlight! link BufferInactiveMod BufferInactive
@@ -24,7 +26,10 @@ highlight! link BufferAlternateIndex BufferInactiveIndex
 highlight! link BufferVisibleIndex BufferInactiveIndex
 highlight BufferInactiveSign guifg=#bdb1a8 guibg=#bdb1a8 guisp=NONE blend=NONE gui=NONE
 highlight! link BufferAlternateSign BufferInactiveSign
+highlight! link BufferAlternateSignRight BufferInactiveSign
+highlight! link BufferInactiveSignRight BufferInactiveSign
 highlight! link BufferVisibleSign BufferInactiveSign
+highlight! link BufferVisibleSignRight BufferInactiveSign
 highlight BufferInactiveTarget guifg=#630e49 guibg=#ded8d3 guisp=NONE blend=NONE gui=underline,reverse
 highlight! link BufferAlternateTarget BufferInactiveTarget
 highlight! link BufferVisibleTarget BufferInactiveTarget
@@ -586,7 +591,8 @@ highlight TSRainbowViolet guifg=#8e3d63 guibg=NONE guisp=NONE blend=NONE gui=NON
 highlight TSRainbowYellow guifg=#813b21 guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight TabLine guifg=NONE guibg=#bdb1a8 guisp=NONE blend=NONE gui=NONE
 highlight! link BufferTabpages TabLine
-highlight TabLineSel guifg=#161e29 guibg=#e9e5e2 guisp=NONE blend=NONE gui=NONE
+highlight! link TabLineFill TabLine
+highlight! link TabLineSel TabLine
 highlight TelescopeBorder guifg=#c8beb7 guibg=#c8beb7 guisp=NONE blend=NONE gui=NONE
 highlight TelescopeBufferLoaded guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight TelescopeFrecencyScores guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
@@ -664,7 +670,6 @@ highlight! link markdownUrl Underlined
 highlight! link @text.underline Underlined
 highlight! link @text.uri Underlined
 highlight VertSplit guifg=#ded8d3 guibg=#e9e5e2 guisp=NONE blend=NONE gui=NONE
-highlight! link TabLineFill VertSplit
 highlight! link WinSeparator VertSplit
 highlight Visual guifg=NONE guibg=#c8beb7 guisp=NONE blend=NONE gui=NONE
 highlight! link UfoPreviewCursorLine Visual
