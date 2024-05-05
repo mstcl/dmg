@@ -138,8 +138,7 @@ highlight! link @lsp.type.enumMember Constant
 highlight CurSearch guifg=NONE guibg=#d1ccde guisp=NONE blend=NONE gui=NONE
 highlight CursorColumn guifg=NONE guibg=#493f37 guisp=NONE blend=NONE gui=NONE
 highlight CursorLine guifg=NONE guibg=#ded8d3 guisp=NONE blend=NONE gui=NONE
-highlight! link UfoCursorFoldedLine CursorLine
-highlight CursorLineNr guifg=#493f37 guibg=#e9e9e2 guisp=NONE blend=NONE gui=NONE
+highlight CursorLineNr guifg=#493f37 guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight DapBreakpoint guifg=#5e2b66 guibg=#d1bed0 guisp=NONE blend=NONE gui=NONE
 highlight DapBreakpointCondition guifg=#793454 guibg=#deb9b9 guisp=NONE blend=NONE gui=NONE
 highlight DapBreakpointRejected guifg=#74351e guibg=#dcb892 guisp=NONE blend=NONE gui=NONE
@@ -393,7 +392,7 @@ highlight! link vimHiCterm Label
 highlight! link xdefaultsLabel Label
 highlight! link xxdAddress Label
 highlight! link yamlKey Label
-highlight LineNr guifg=#bdb1a8 guibg=#e9e5e2 guisp=NONE blend=NONE gui=NONE
+highlight LineNr guifg=#bdb1a8 guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight LspInfoBorder guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight LspInfoFiletype guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight LspInfoList guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
@@ -508,7 +507,7 @@ highlight! link @repeat Repeat
 highlight! link @variable.builtin Repeat
 highlight Search guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=reverse
 highlight! link Substitute Search
-highlight SignColumn guifg=NONE guibg=#e9e5e2 guisp=NONE blend=NONE gui=NONE
+highlight SignColumn guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight Special guifg=#26126d guibg=NONE guisp=NONE blend=NONE gui=bold
 highlight! link DressingSelectIdx Special
 highlight! link cssPseudoClass Special
@@ -655,6 +654,7 @@ highlight! link gitrebaseSummary Title
 highlight! link helpHeadline Title
 highlight! link @text.title Title
 highlight UfoFoldedBg guifg=NONE guibg=#e1d2d6 guisp=NONE blend=NONE gui=NONE
+highlight! link UfoCursorFoldedLine UfoFoldedBg
 highlight! link UfoPreviewWinBar UfoFoldedBg
 highlight UfoFoldedFg guifg=#161e29 guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight Underlined guifg=#573e1a guibg=NONE guisp=#573e1a blend=NONE gui=underline

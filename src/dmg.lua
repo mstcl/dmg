@@ -25,12 +25,12 @@ local theme = lush(function(injected_functions)
 
 		VertSplit({ bg = "#e9e5e2", fg = "#ded8d3" }),         -- VertSplit      xxx ctermfg=15 ctermbg=15 guifg=#ded8d3 guibg=#e9e5e2
 		WinSeparator({ VertSplit }),                           -- WinSeparator   xxx links to VertSplit
-		LineNr({ fg= "#bdb1a8", bg="#e9e5e2" }),                              -- LineNr         xxx links to StatusLineNC
+		LineNr({ fg= "#bdb1a8" }),                              -- LineNr         xxx links to StatusLineNC
 		CursorLine({ bg = "#ded8d3" }),                        -- CursorLine     xxx ctermbg=15 guibg=#ded8d3
-		CursorLineNr({ fg = "#493f37", bg = "#e9e9e2" }),                      -- CursorLineNr   xxx ctermbg=15 guibg=#c8beb7
+		CursorLineNr({ fg = "#493f37" }),                      -- CursorLineNr   xxx ctermbg=15 guibg=#c8beb7
 		CursorLineFold({ FoldColumn }),                        -- CursorLineFold xxx links to FoldColumn
 		CursorColumn({ bg = "#493f37" }),                      -- CursorColumn   xxx ctermbg=237 guibg=#493f37
-		SignColumn({ bg = "#e9e5e2" }),                        -- SignColumn xxx cterm= gui= guibg=#e9e5e2
+		SignColumn({}),                        -- SignColumn xxx cterm= gui= guibg=#e9e5e2
 		ColorColumn({ bg = "#ded8d3" }),                       -- ColorColumn    xxx guibg=#ded8d3
 
 		TabLine({ bg = "#bdb1a8" }),                           -- TabLine        xxx ctermbg=15 guibg=#bdb1a8
@@ -928,7 +928,7 @@ local theme = lush(function(injected_functions)
 		UfoPreviewWinBar({ UfoFoldedBg }), -- UfoPreviewWinBar xxx links to UfoFoldedBg
 		UfoFoldedFg({ fg = "#161e29" }), -- UfoFoldedFg    xxx guifg=#161e29
 		UfoFoldedEllipsis({ Comment }), -- UfoFoldedEllipsis xxx links to Comment
-		UfoCursorFoldedLine({ CursorLine }), -- UfoCursorFoldedLine xxx links to CursorLine
+		UfoCursorFoldedLine({ UfoFoldedBg }), -- UfoCursorFoldedLine xxx links to CursorLine
 		UfoPreviewThumb({ PmenuThumb }), -- UfoPreviewThumb xxx links to PmenuThumb
 		UfoPreviewSbar({ PmenuSbar }), -- UfoPreviewSbar xxx links to PmenuSbar
 		UfoPreviewCursorLine({ Visual }), -- UfoPreviewCursorLine xxx links to Visual
