@@ -13,7 +13,7 @@ local spec = lush(function()
 		Statusline({ bg = "#ded8d3", fg = "#161e29" }),
 		StatuslineAlt({ bg = "#ded8d3", fg = "#837163" }),
 		StatuslineModified({ bg = "#26126a", gui = "bold", fg = "#ded8d3" }),
-		StatuslineMode({ bg = "#752c5f", gui = "bold", fg = "#ded8d3" }),
+		StatuslineMode({ bg = "#630e49", gui = "bold", fg = "#ded8d3" }),
 	}
 end)
 return spec

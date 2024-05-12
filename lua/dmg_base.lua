@@ -23,9 +23,9 @@ local spec = lush(function()
 		SignColumn({}),
 		ColorColumn({ bg = "#ded8d3" }),
 
-		TabLine({ bg = "#bdb1a8" }),
-		TabLineSel({ TabLine }),
-		TabLineFill({ TabLine }),
+		TabLine({ bg = "#bdb1a8", fg = "#746458" }),
+		TabLineSel({ bg = "#ded8d3", fg = "#574b42" }),
+		TabLineFill({ bg = "#bdb1a8" }),
 		QuickFixLine({ bg = "#9e8d7f" }),
 		WinBar({ bg = "#ded8d3" }),
 		WinBarNC({ WinBar }),

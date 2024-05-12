@@ -4,8 +4,8 @@ local base = require("dmg_base")
 local spec = lush(function()
 	return {
 		-- TELESCOPE/FZFLUA
-		TelescopeTitle({ bg = "#752c5f", gui = "bold", fg = "#ded8d3" }),
-		TelescopePreviewTitle({ bg = "#483d8b", gui = "bold", fg = "#ded8d3" }),
+		TelescopeTitle({ bg = "#630e49", gui = "bold", fg = "#ded8d3" }),
+		TelescopePreviewTitle({ bg = "#26126d", gui = "bold", fg = "#ded8d3" }),
 		TelescopePreviewNormal({ base.WinBar }),
 		TelescopeResultsTitle({ bg = "#184e1e", gui = "bold", fg = "#c8beb7" }),
 		TelescopePromptTitle({ bg = "#630e49", gui = "bold", fg = "#c8beb7" }),
