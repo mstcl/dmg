@@ -1,7 +1,8 @@
 ---@diagnostic disable: undefined-global
 local lush = require("lush")
 local base = require("dmg_base")
-local spec = lush(function()
+local spec = lush(function(injected_functions)
+	local sym = injected_functions.sym
 	return {
 		-- DIAGNOSTICS
 		DiagnosticWarn({ base.Warning }),
@@ -34,6 +35,10 @@ local spec = lush(function()
 		LspInfoTip({}),
 		LspInfoList({}),
 		LspInfoBorder({}),
+		-- LSP INLAY HINT
+		LspInlayHint({ bg = "#ded8d3", fg = "#837163" }),
+		-- SEMANTIC TOKENS
+		sym("@lsp.type.keyword.yaml.ansible")({ base.Special })
 	}
 end)
 return spec
