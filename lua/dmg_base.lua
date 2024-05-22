@@ -10,7 +10,7 @@ local spec = lush(function()
 		StatusLineTermNC({ StatusLineNC }),
 		StatusLineTerm({ StatusLine }),
 
-		Folded({ bg = "#e1d2d6" }),
+		Folded({ bg = "#ded8d3", fg = "#9e8d7f" }),
 		FoldColumn({ bg = "#e9e5e2", gui = "bold", fg = "#9e8d7f" }),
 
 		VertSplit({ bg = "#e9e5e2", fg = "#ded8d3" }),
