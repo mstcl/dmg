@@ -13,51 +13,32 @@ Using lazy.nvim:
 	"mstcl/dmg",
 	lazy = false,
 	priority = 1000,
-    dependencies = {
-        "rktjmp/lush.nvim",
-    },
 	config = function()
 		vim.cmd.colorscheme("dmg")
 	end,
 },
 ```
 
-## Integration with plugins
-
-All modules are found in the `lua` directory.
+## Extending using Lush
 
 By default, only Treesitter and LSP highlights are loaded. To extend, we use
-[Lush](https://github.com/rktjmp/lush.nvim) to extend the colorscheme. The
-easiest way is to add a new theme. For example, copy the content of
-`colors/dmg.lua` into `~/.config/nvim/colors/dmg_extended.lua` and use
-`lush.merge()` to extend:
+[Lush](https://github.com/rktjmp/lush.nvim) to extend the colorscheme.
+
+The easiest way is to add a new theme. For example, make the file
+`~/.config/nvim/colors/dmg_extended.lua` and use `lush.merge()` to extend:
 
 ```lua
-vim.opt.background = "light"
-vim.g.colors_ame = "dmg_extended"
-
-vim.g.terminal_color_0 = "#c8beb7"
-vim.g.terminal_color_1 = "#630e49"
-vim.g.terminal_color_2 = "#74351e"
-vim.g.terminal_color_3 = "#184e1e"
-vim.g.terminal_color_4 = "#26126d"
-vim.g.terminal_color_5 = "#793454"
-vim.g.terminal_color_6 = "#5e2b66"
-vim.g.terminal_color_7 = "#161e29"
-vim.g.terminal_color_8 = "#bdb1a8"
-vim.g.terminal_color_9 = "#752c5f"
-vim.g.terminal_color_10 = "#813b21"
-vim.g.terminal_color_11 = "#24752d"
-vim.g.terminal_color_12 = "#483d8b"
-vim.g.terminal_color_13 = "#72347c"
-vim.g.terminal_color_14 = "#8e3d63"
-vim.g.terminal_color_15 = "#2c2621"
+vim.cmd("highlight clear")
+vim.cmd("set t_Co=256")
+vim.o.termguicolors = true
+vim.o.background = "light"
+vim.g.colors_name = "dmg_extended"
 
 package.loaded["dmg"] = nil
 
 local lush = require("lush")
 local extended = lush.merge({
-	require("dmg"), -- This is the base colorscheme
+	require("dmg"),
 	require("dmg_statusline"),
 	require("dmg_mini_starter"),
 	require("dmg_telescope"),
@@ -70,4 +51,30 @@ local extended = lush.merge({
     require("dmg_dressing"),
     require("dmg_null_ls"),
     require("dmg_navic"),
+    require("dmg_dap"),
+    require("dmg_dap_ui"),
+    require("dmg_bufferline"),
 })
+
+lush(extended)
+```
+
+Then modify the plugin spec to add Lush as a dependency, and use the extended
+colorscheme:
+
+```lua
+{
+    -- Colorscheme
+    "mstcl/dmg",
+    lazy = false,
+    priority = 1000,
+    dependencies = {
+        "rktjmp/lush.nvim",
+    },
+    config = function()
+        vim.cmd.colorscheme("dmg_extended")
+    end,
+},
+```
+
+All available integrations are found in the `lua` directory.
