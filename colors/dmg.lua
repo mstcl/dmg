@@ -1,4 +1,4 @@
-vim.opt.background = "light"
+vim.o.background = "light"
 vim.g.colors_name = "dmg"
 
 vim.g.terminal_color_0 = "#c8beb7"
