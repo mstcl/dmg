@@ -10,12 +10,12 @@ Using lazy.nvim:
 
 ```lua
 {
-	"mstcl/dmg",
-	lazy = false,
-	priority = 1000,
-	config = function()
-		vim.cmd.colorscheme("dmg")
-	end,
+    "mstcl/dmg",
+    lazy = false,
+    priority = 1000,
+    config = function()
+        vim.cmd.colorscheme("dmg")
+    end,
 },
 ```
 
@@ -38,15 +38,15 @@ package.loaded["dmg"] = nil
 
 local lush = require("lush")
 local extended = lush.merge({
-	require("dmg"),
-	require("dmg_statusline"),
-	require("dmg_mini_starter"),
-	require("dmg_telescope"),
-	require("dmg_whichkey"),
-	require("dmg_neogit"),
-	require("dmg_incline"),
-	require("dmg_cmp"),
-	require("dmg_flash"),
+    require("dmg"),
+    require("dmg_statusline"),
+    require("dmg_mini_starter"),
+    require("dmg_telescope"),
+    require("dmg_whichkey"),
+    require("dmg_neogit"),
+    require("dmg_incline"),
+    require("dmg_cmp"),
+    require("dmg_flash"),
     require("dmg_mason"),
     require("dmg_dressing"),
     require("dmg_null_ls"),
