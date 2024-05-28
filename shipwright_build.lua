@@ -5,5 +5,5 @@ run(
 	lushwright.to_vimscript,
 	{ prepend, "set background=light" },
 	{ prepend, 'let g:colors_name="dmg"' },
-	{ overwrite, "colors/dmg.vim" }
+	{ patchwrite, "colors/dmg.vim", "\" PATCH BEGIN", "\" PATCH END" }
 )

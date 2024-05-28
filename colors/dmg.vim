@@ -1,3 +1,4 @@
+" PATCH BEGIN
 let g:colors_name="dmg"
 set background=light
 highlight Normal guifg=#161e29 guibg=#e9e5e2 guisp=NONE blend=NONE gui=NONE
@@ -13,7 +14,6 @@ highlight Comment guifg=#837163 guibg=NONE guisp=NONE blend=NONE gui=italic
 highlight! link @comment Comment
 highlight! link @lsp.type.comment Comment
 highlight! link @text.literal Comment
-highlight Conceal guifg=#752c5f guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight! link @org.agenda.deadline Conceal
 highlight! link @punctuation.bracket Conceal
 highlight Conditional guifg=#74351e guibg=NONE guisp=NONE blend=NONE gui=italic
@@ -34,6 +34,7 @@ highlight! link @define Define
 highlight! link @keyword Define
 highlight! link @type.definition Define
 highlight Delimiter guifg=#9e8d7f guibg=NONE guisp=NONE blend=NONE gui=NONE
+highlight! link Conceal Delimiter
 highlight! link Noise Delimiter
 highlight! link @markup.heading.1.marker Delimiter
 highlight! link @markup.heading.2.marker Delimiter
@@ -245,3 +246,23 @@ highlight @punctuation.special guifg=#746458 guibg=NONE guisp=NONE blend=NONE gu
 highlight @string.special.url guifg=#184e1e guibg=NONE guisp=NONE blend=NONE gui=underline
 highlight @text.reference guifg=#793454 guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight @text.strike guifg=#493f37 guibg=NONE guisp=NONE blend=NONE gui=strikethrough
+" PATCH END
+
+lua << EOF
+vim.g.terminal_color_0 = "#c8beb7"
+vim.g.terminal_color_1 = "#630e49"
+vim.g.terminal_color_2 = "#74351e"
+vim.g.terminal_color_3 = "#184e1e"
+vim.g.terminal_color_4 = "#26126d"
+vim.g.terminal_color_5 = "#793454"
+vim.g.terminal_color_6 = "#5e2b66"
+vim.g.terminal_color_7 = "#161e29"
+vim.g.terminal_color_8 = "#bdb1a8"
+vim.g.terminal_color_9 = "#752c5f"
+vim.g.terminal_color_10 = "#813b21"
+vim.g.terminal_color_11 = "#24752d"
+vim.g.terminal_color_12 = "#483d8b"
+vim.g.terminal_color_13 = "#72347c"
+vim.g.terminal_color_14 = "#8e3d63"
+vim.g.terminal_color_15 = "#2c2621"
+EOF

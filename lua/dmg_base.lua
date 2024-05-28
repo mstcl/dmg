@@ -66,11 +66,11 @@ local spec = lush(function()
 		NonText({ fg = "#c8beb7" }),
 		EndOfBuffer({ NonText }),
 		Whitespace({ NonText }),
-		Conceal({ fg = "#752c5f" }),
 		Underlined({ gui = "underline", sp = "#573e1a", fg = "#573e1a" }),
 		Tag({ Underlined }),
 		Comment({ gui = "italic", fg = "#837163" }),
 		Delimiter({ fg = "#9e8d7f" }),
+		Conceal({ Delimiter }),
 
 		Warning({ bg = "#d6c890", fg = "#573e1a" }),
 		Info({ bg = "#d1ccde", fg = "#26126d" }),
@@ -143,22 +143,5 @@ local spec = lush(function()
 		RedrawDebugRecompose({ bg = "red" }),
 	}
 end)
-
-vim.g.terminal_color_0 = "#c8beb7"
-vim.g.terminal_color_1 = "#630e49"
-vim.g.terminal_color_2 = "#74351e"
-vim.g.terminal_color_3 = "#184e1e"
-vim.g.terminal_color_4 = "#26126d"
-vim.g.terminal_color_5 = "#793454"
-vim.g.terminal_color_6 = "#5e2b66"
-vim.g.terminal_color_7 = "#161e29"
-vim.g.terminal_color_8 = "#bdb1a8"
-vim.g.terminal_color_9 = "#752c5f"
-vim.g.terminal_color_10 = "#813b21"
-vim.g.terminal_color_11 = "#24752d"
-vim.g.terminal_color_12 = "#483d8b"
-vim.g.terminal_color_13 = "#72347c"
-vim.g.terminal_color_14 = "#8e3d63"
-vim.g.terminal_color_15 = "#2c2621"
 
 return spec
