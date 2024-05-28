@@ -1,8 +1,9 @@
+---@diagnostic disable: undefined-global
 local lushwright = require("shipwright.transform.lush")
----@diagnostic disable-next-line: undefined-global
 run(
 	require("dmg"),
-	lushwright.to_lua,
-	---@diagnostic disable-next-line: undefined-global
-	{ patchwrite, "colors/dmg.lua", "-- PATCH_OPEN", "-- PATCH_CLOSE" }
+	lushwright.to_vimscript,
+	{ prepend, "set background=light" },
+	{ prepend, 'let g:colors_name="dmg"' },
+	{ overwrite, "colors/dmg.vim" }
 )
