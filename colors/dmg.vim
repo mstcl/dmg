@@ -56,10 +56,12 @@ highlight! link LspDiagnosticsSignWarning DiagnosticSignWarn
 highlight DiagnosticUnderlineOk guifg=NONE guibg=NONE guisp=#184e1e blend=NONE gui=undercurl
 highlight DiagnosticUnnecessary guifg=NONE guibg=NONE guisp=#574b42 blend=NONE gui=underdotted
 highlight DiffAdd guifg=#637337 guibg=#dae5cd guisp=NONE blend=NONE gui=NONE
+highlight! link Added DiffAdd
 highlight! link DiagnosticOk DiffAdd
 highlight! link diffAdded DiffAdd
 highlight DiffChange guifg=#705357 guibg=#e1d2d6 guisp=NONE blend=NONE gui=NONE
 highlight DiffDelete guifg=#834c40 guibg=#ecd5d3 guisp=NONE blend=NONE gui=NONE
+highlight! link Removed DiffDelete
 highlight! link Todo DiffDelete
 highlight! link diffRemoved DiffDelete
 highlight DiffFGAdd guifg=#637337 guibg=NONE guisp=NONE blend=NONE gui=NONE
@@ -79,8 +81,10 @@ highlight! link debugBreakpoint ErrorMsg
 highlight! link @function.macro ErrorMsg
 highlight Exception guifg=#630e49 guibg=NONE guisp=NONE blend=NONE gui=bold
 highlight FloatBorder guifg=#c8beb7 guibg=#c8beb7 guisp=NONE blend=NONE gui=NONE
+highlight FloatFooter guifg=#493f37 guibg=#c8beb7 guisp=NONE blend=NONE gui=bold
 highlight FloatShadow guifg=NONE guibg=black guisp=NONE blend=80 gui=NONE
 highlight FloatShadowThrough guifg=NONE guibg=black guisp=NONE blend=100 gui=NONE
+highlight FloatTitle guifg=#493f37 guibg=#c8beb7 guisp=NONE blend=NONE gui=bold
 highlight FoldColumn guifg=#9e8d7f guibg=#e9e5e2 guisp=NONE blend=NONE gui=bold
 highlight! link CursorLineFold FoldColumn
 highlight Folded guifg=#9e8d7f guibg=#ded8d3 guisp=NONE blend=NONE gui=NONE
@@ -146,7 +150,7 @@ highlight PreProc guifg=#573e1a guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight! link @preproc PreProc
 highlight Question guifg=#573e1a guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight! link @property Question
-highlight QuickFixLine guifg=NONE guibg=#9e8d7f guisp=NONE blend=NONE gui=NONE
+highlight QuickFixLine guifg=NONE guibg=#ded8d3 guisp=NONE blend=NONE gui=NONE
 highlight RedrawDebugClear guifg=NONE guibg=yellow guisp=NONE blend=NONE gui=NONE
 highlight RedrawDebugComposed guifg=NONE guibg=green guisp=NONE blend=NONE gui=NONE
 highlight RedrawDebugNormal guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=reverse
@@ -193,7 +197,6 @@ highlight TabLineFill guifg=NONE guibg=#bdb1a8 guisp=NONE blend=NONE gui=NONE
 highlight TabLineSel guifg=#574b42 guibg=#ded8d3 guisp=NONE blend=NONE gui=NONE
 highlight TermCursor guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=reverse
 highlight Title guifg=NONE guibg=NONE guisp=NONE blend=NONE gui=bold
-highlight! link FloatTitle Title
 highlight! link @text.title Title
 highlight Underlined guifg=#573e1a guibg=NONE guisp=#573e1a blend=NONE gui=underline
 highlight! link Tag Underlined

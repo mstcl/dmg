@@ -3,7 +3,6 @@ local lush = require("lush")
 local spec = lush(function()
 	return {
 		Normal({ bg = "#e9e5e2", fg = "#161e29" }),
-		NormalFloat({ bg = "#c8beb7", fg = "#493f37" }),
 
 		StatusLine({ bg = "#ded8d3", fg = "#161e29" }),
 		StatusLineNC({ bg = "#ded8d3", fg = "#574b42" }),
@@ -26,7 +25,7 @@ local spec = lush(function()
 		TabLine({ bg = "#bdb1a8", fg = "#746458" }),
 		TabLineSel({ bg = "#ded8d3", fg = "#574b42" }),
 		TabLineFill({ bg = "#bdb1a8" }),
-		QuickFixLine({ bg = "#9e8d7f" }),
+		QuickFixLine({ bg = "#ded8d3" }),
 		WinBar({ bg = "#ded8d3" }),
 		WinBarNC({ WinBar }),
 
@@ -61,6 +60,8 @@ local spec = lush(function()
 		DiffFGDelete({ fg = "#834c40" }),
 		diffAdded({ DiffAdd }),
 		diffRemoved({ DiffDelete }),
+		Added({ DiffAdd }),
+		Removed({ DiffDelete }),
 
 		Directory({ gui = "bold", fg = "#483d8b" }),
 		NonText({ fg = "#c8beb7" }),
@@ -118,8 +119,10 @@ local spec = lush(function()
 		Typedef({ Conditional }),
 		Noise({ Delimiter }),
 
+		NormalFloat({ bg = "#c8beb7", fg = "#493f37" }),
 		FloatBorder({ bg = "#c8beb7", fg = "#c8beb7" }),
-		FloatTitle({ Title }),
+		FloatTitle({ bg = "#c8beb7", fg = "#493f37", gui = "bold" }),
+		FloatFooter({ bg = "#c8beb7", fg = "#493f37", gui = "bold" }),
 		FloatShadow({ bg = "black", blend = 80 }),
 		FloatShadowThrough({ bg = "black", blend = 100 }),
 
