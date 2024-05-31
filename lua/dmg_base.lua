@@ -62,6 +62,7 @@ local spec = lush(function()
 		diffRemoved({ DiffDelete }),
 		Added({ DiffAdd }),
 		Removed({ DiffDelete }),
+		Changed({ DiffChange }),
 
 		Directory({ gui = "bold", fg = "#483d8b" }),
 		NonText({ fg = "#c8beb7" }),
