@@ -100,6 +100,9 @@ local spec = lush(function(injected_functions)
 		TSPlaygroundFocus({}),
 		TSPlaygroundLang({}),
 		TSQueryLinterError({}),
+
+		sym("@string.yaml")({ fg = "#184e1e" }),
+		sym("@punctuation.delimiter.yaml")({ base.Delimiter })
 	}
 end)
 return spec

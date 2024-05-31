@@ -42,6 +42,7 @@ highlight! link @markup.heading.4.marker Delimiter
 highlight! link @markup.heading.5.marker Delimiter
 highlight! link @markup.heading.6.marker Delimiter
 highlight! link @punctuation Delimiter
+highlight! link @punctuation.delimiter.yaml Delimiter
 highlight DiagnosticFloatingOk guifg=#184e1e guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight! link DiagnosticSignOk DiagnosticFloatingOk
 highlight DiagnosticSignError guifg=#74351e guibg=#dcb892 guisp=NONE blend=NONE gui=NONE
@@ -250,6 +251,7 @@ highlight @org.keyword.done guifg=#184e1e guibg=#d0d8cc guisp=NONE blend=NONE gu
 highlight @org.keyword.todo guifg=#630e49 guibg=#dbc4c8 guisp=NONE blend=NONE gui=NONE
 highlight @punctuation.special guifg=#746458 guibg=NONE guisp=NONE blend=NONE gui=bold
 highlight @string.special.url guifg=#184e1e guibg=NONE guisp=NONE blend=NONE gui=underline
+highlight @string.yaml guifg=#184e1e guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight @variable.member guifg=#493f37 guibg=NONE guisp=NONE blend=NONE gui=NONE
 highlight @variable.parameter guifg=#813b21 guibg=NONE guisp=NONE blend=NONE gui=NONE
 " PATCH END
